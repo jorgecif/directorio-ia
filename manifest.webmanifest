@@ -1,0 +1,32 @@
+{
+  "name": "Directorio IA — herramientas de IA generativa",
+  "short_name": "Directorio IA",
+  "description": "Catálogo comparativo de herramientas de IA generativa: gratuitas, freemium, de pago y de código abierto.",
+  "lang": "es",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#08090f",
+  "theme_color": "#08090f",
+  "categories": ["productivity", "utilities", "education"],
+  "icons": [
+    {
+      "src": "assets/icono.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icono-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Solo herramientas gratuitas", "url": "./?gratis=1" },
+    { "name": "Privadas y locales", "url": "./?priv=local" },
+    { "name": "Novedades", "url": "./?nuevas=1&orden=nuevas" }
+  ]
+}

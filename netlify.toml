@@ -1,0 +1,29 @@
+# Configuración para Netlify (también sirve como referencia para Cloudflare Pages).
+# No hay build: el sitio es estático y se publica tal cual.
+
+[build]
+  publish = "."
+  command = "node scripts/validar.mjs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+# El catálogo debe poder actualizarse sin esperar a que caduque la caché.
+[[headers]]
+  for = "/data/tools.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

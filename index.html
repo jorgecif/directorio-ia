@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="oscuro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Directorio IA — herramientas de inteligencia artificial generativa</title>
+<meta name="description" content="Directorio comparativo de herramientas de IA generativa: gratuitas, freemium, de pago y de código abierto. Filtra por precio, privacidad, idioma y plataforma, compara opciones y arma tu stack con presupuesto.">
+<meta name="theme-color" content="#08090f">
+<meta property="og:title" content="Directorio IA">
+<meta property="og:description" content="Encuentra, compara y presupuesta herramientas de IA generativa. Gratuitas y de pago.">
+<meta property="og:type" content="website">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%237c5cff'/%3E%3Ctext x='50' y='70' font-size='58' text-anchor='middle' fill='white' font-family='system-ui' font-weight='bold'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="saltar" href="#resultados">Ir a los resultados</a>
+
+<header class="top">
+  <a class="marca" href="./" aria-label="Directorio IA, inicio">
+    <span class="marca-icono" aria-hidden="true">✦</span>
+    <span class="marca-txt">Directorio IA<small>Generativa</small></span>
+  </a>
+
+  <div class="buscador">
+    <span class="lupa" aria-hidden="true">🔍</span>
+    <label class="sr" for="q">Buscar herramientas</label>
+    <input id="q" type="search" placeholder="Buscar: video, transcribir reuniones, gratis…" autocomplete="off" spellcheck="false">
+    <kbd>Ctrl K</kbd>
+  </div>
+
+  <div class="top-acciones">
+    <button class="btn abrir-filtros btn-icono" id="btn-filtros" aria-label="Abrir filtros">☰</button>
+    <button class="btn" id="btn-asistente" title="Responde 4 preguntas y te recomendamos herramientas">
+      <span aria-hidden="true">🧭</span><span class="rotulo">Asistente</span>
+    </button>
+    <button class="btn" id="btn-stack" title="Tu selección y su coste mensual">
+      <span aria-hidden="true">🧰</span><span class="rotulo">Mi stack</span>
+      <span class="contador" id="stack-n" data-n="0"></span>
+    </button>
+    <button class="btn btn-icono" id="btn-tema" aria-label="Cambiar tema claro u oscuro" title="Tema claro / oscuro">🌙</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Todas las herramientas de <em>IA generativa</em>, en un solo sitio</h1>
+  <p>
+    Catálogo comparado y mantenido a mano. Filtra por precio real, privacidad de tus datos,
+    calidad en español o si puedes ejecutarla en tu propio equipo.
+  </p>
+
+  <div class="hero-stats" id="hero-stats"></div>
+
+  <div class="chips-rapidos" id="chips-rapidos"></div>
+</section>
+
+<main class="layout">
+
+  <aside class="filtros" id="filtros" aria-label="Filtros">
+    <div class="grupo">
+      <h3>Filtros <button class="btn btn-sm btn-fantasma" id="btn-limpiar">Limpiar todo</button></h3>
+    </div>
+    <div id="filtros-cuerpo"></div>
+  </aside>
+
+  <div class="contenido">
+    <div class="barra">
+      <span id="conteo" role="status" aria-live="polite"></span>
+      <span class="sep"></span>
+
+      <label class="sr" for="orden">Ordenar por</label>
+      <select id="orden">
+        <option value="relevancia">Más relevantes</option>
+        <option value="destacados">Destacadas primero</option>
+        <option value="score">Mejor valoradas</option>
+        <option value="nuevas">Más recientes</option>
+        <option value="precio-asc">Precio: menor a mayor</option>
+        <option value="precio-desc">Precio: mayor a menor</option>
+        <option value="nombre">Nombre (A-Z)</option>
+      </select>
+
+      <div class="vistas" role="group" aria-label="Cambiar vista">
+        <button data-vista="grid" aria-pressed="true" title="Tarjetas">▦</button>
+        <button data-vista="lista" aria-pressed="false" title="Lista compacta">☰</button>
+        <button data-vista="tabla" aria-pressed="false" title="Tabla comparativa">▤</button>
+      </div>
+
+      <button class="btn btn-sm" id="btn-sorpresa" title="Descubre una herramienta al azar">🎲 Sorpréndeme</button>
+      <button class="btn btn-sm" id="btn-comparar" disabled>⚖️ Comparar <span class="contador" id="comp-n" data-n="0"></span></button>
+      <button class="btn btn-sm" id="btn-stats" title="Radiografía del directorio">📊 Datos</button>
+      <button class="btn btn-sm" id="btn-exportar" title="Descargar los resultados filtrados">⬇️ CSV</button>
+    </div>
+
+    <div class="activos" id="activos"></div>
+
+    <div id="resultados" class="grid"></div>
+  </div>
+</main>
+
+<footer class="pie">
+  <span>Directorio IA · <span id="pie-total"></span> herramientas · actualizado <span id="pie-fecha"></span></span>
+  <span class="sep"></span>
+  <span>Precios de referencia en USD/mes. Verifica siempre en el sitio oficial.</span>
+  <button class="btn btn-sm btn-fantasma" id="btn-atajos">⌨️ Atajos</button>
+</footer>
+
+<!-- ===================== Diálogos ===================== -->
+
+<dialog id="dlg-detalle" aria-labelledby="detalle-titulo">
+  <div class="dlg-head">
+    <h2 id="detalle-titulo">Ficha</h2>
+    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
+  </div>
+  <div class="dlg-body" id="detalle-cuerpo"></div>
+</dialog>
+
+<dialog id="dlg-comparar" class="ancho" aria-labelledby="comparar-titulo">
+  <div class="dlg-head">
+    <h2 id="comparar-titulo">Comparar herramientas</h2>
+    <button class="btn btn-sm" id="btn-vaciar-comp">Vaciar</button>
+    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
+  </div>
+  <div class="dlg-body" id="comparar-cuerpo"></div>
+</dialog>
+
+<dialog id="dlg-asistente" aria-labelledby="asistente-titulo">
+  <div class="dlg-head">
+    <h2 id="asistente-titulo">🧭 Asistente de elección</h2>
+    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
+  </div>
+  <div class="dlg-body">
+    <div class="progreso"><i id="asis-progreso" style="width:25%"></i></div>
+    <div id="asis-pasos"></div>
+  </div>
+</dialog>
+
+<dialog id="dlg-stats" aria-labelledby="stats-titulo">
+  <div class="dlg-head">
+    <h2 id="stats-titulo">📊 Radiografía del directorio</h2>
+    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
+  </div>
+  <div class="dlg-body" id="stats-cuerpo"></div>
+</dialog>
+
+<dialog id="dlg-atajos" aria-labelledby="atajos-titulo">
+  <div class="dlg-head">
+    <h2 id="atajos-titulo">⌨️ Atajos de teclado</h2>
+    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
+  </div>
+  <div class="dlg-body">
+    <div class="ficha-rejilla">
+      <div class="dato"><dt>Buscar</dt><dd><kbd>/</kbd></dd></div>
+      <div class="dato"><dt>Paleta de comandos</dt><dd><kbd>Ctrl</kbd> + <kbd>K</kbd></dd></div>
+      <div class="dato"><dt>Asistente</dt><dd><kbd>A</kbd></dd></div>
+      <div class="dato"><dt>Mi stack</dt><dd><kbd>S</kbd></dd></div>
+      <div class="dato"><dt>Comparador</dt><dd><kbd>C</kbd></dd></div>
+      <div class="dato"><dt>Herramienta al azar</dt><dd><kbd>R</kbd></dd></div>
+      <div class="dato"><dt>Tema claro / oscuro</dt><dd><kbd>T</kbd></dd></div>
+      <div class="dato"><dt>Limpiar filtros</dt><dd><kbd>Shift</kbd> + <kbd>X</kbd></dd></div>
+      <div class="dato"><dt>Cerrar</dt><dd><kbd>Esc</kbd></dd></div>
+    </div>
+  </div>
+</dialog>
+
+<!-- ===================== Panel Mi stack ===================== -->
+
+<div class="velo" id="velo"></div>
+
+<aside class="cajon" id="cajon-stack" aria-label="Mi stack de herramientas">
+  <div class="dlg-head">
+    <h2>🧰 Mi stack</h2>
+    <button class="cerrar" id="cerrar-stack" aria-label="Cerrar panel">✕</button>
+  </div>
+  <div class="cajon-cuerpo" id="stack-cuerpo"></div>
+  <div class="cajon-pie" id="stack-pie"></div>
+</aside>
+
+<!-- ===================== Paleta de comandos ===================== -->
+
+<div class="paleta" id="paleta" role="dialog" aria-modal="true" aria-label="Paleta de comandos">
+  <div class="paleta-caja">
+    <label class="sr" for="paleta-q">Buscar herramienta o acción</label>
+    <input id="paleta-q" type="text" placeholder="Escribe una herramienta o una acción…" autocomplete="off">
+    <div class="paleta-lista" id="paleta-lista"></div>
+    <div class="paleta-pie">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navegar</span>
+      <span><kbd>Enter</kbd> abrir ficha</span>
+      <span><kbd>Ctrl</kbd>+<kbd>Enter</kbd> ir al sitio</span>
+      <span><kbd>Esc</kbd> cerrar</span>
+    </div>
+  </div>
+</div>
+
+<div id="avisos" aria-live="polite"></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "directorio-ia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Directorio comparativo de herramientas de IA generativa. Sitio estático sin dependencias.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/servir.mjs",
+    "start": "node scripts/servir.mjs",
+    "validar": "node scripts/validar.mjs",
+    "arreglar": "node scripts/validar.mjs --arreglar-alt",
+    "sellar": "node scripts/sellar.mjs",
+    "publicar": "node scripts/sellar.mjs && node scripts/validar.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

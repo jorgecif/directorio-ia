@@ -1,0 +1,11 @@
+node_modules/
+
+# Ajustes locales de Claude Code (no interesan en el repositorio publico)
+.claude/settings.local.json
+
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+.netlify/
