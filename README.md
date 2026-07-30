@@ -150,8 +150,8 @@ node scripts/validar.mjs                 # informe
 node scripts/validar.mjs --arreglar-alt  # además limpia las referencias huérfanas
 ```
 
-Devuelve código de salida distinto de cero si hay errores, así que **el despliegue automático
-se detiene si el JSON está mal**.
+Devuelve código de salida distinto de cero si hay errores, para poder encadenarlo en un
+despliegue automático (ver más abajo).
 
 ### Añadir una categoría
 
@@ -166,42 +166,52 @@ y en las estadísticas.
 
 ---
 
-## Publicar gratis
+## Publicado en
 
-Las tres opciones son gratuitas para un sitio estático. **Cloudflare Pages** es la más
-cómoda si no quieres tocar GitHub Actions.
+**<https://jorgecif.github.io/directorio-ia/>**
 
-### Opción A — GitHub Pages (ya configurado)
+Sirve directamente desde la rama `main` (GitHub Pages, modo *branch*). Como el sitio es
+estático y no necesita compilarse, **cada `git push` a `main` lo actualiza en menos de un minuto**,
+sin ningún paso extra:
 
 ```bash
-git init
-git add -A
-git commit -m "Directorio IA"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/directorio-ia.git
-git push -u origin main
+node scripts/sellar.mjs && node scripts/validar.mjs
+git add -A && git commit -m "Actualiza catálogo" && git push
 ```
 
-Luego en GitHub: **Settings → Pages → Source: GitHub Actions**. Con eso, cada `git push` a `main`
-valida el JSON y publica. Queda en `https://TU-USUARIO.github.io/directorio-ia/`.
+### Pendiente opcional: validación automática antes de publicar
 
-El flujo de trabajo está en [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+En el proyecto hay un flujo de GitHub Actions en `.github/workflows/deploy.yml` que **detiene el
+despliegue si `data/tools.json` tiene errores**. Está sin subir porque el token de `gh` no tenía
+permiso `workflow`. Para activarlo:
 
-### Opción B — Cloudflare Pages
+```bash
+gh auth refresh -h github.com -s workflow
+```
 
-1. Entra en el panel de Cloudflare → **Workers & Pages → Create → Pages**.
-2. Conecta el repositorio de GitHub.
-3. Build command: `node scripts/validar.mjs` · Output directory: `/` (raíz).
+Después súbelo y cambia Pages al modo Actions:
 
-Sin límite de ancho de banda en el plan gratuito y con red global.
+```bash
+git add .github/workflows/deploy.yml
+git commit -m "Añade validación automática antes de publicar"
+git push
+gh api -X PUT repos/jorgecif/directorio-ia/pages -f build_type=workflow
+```
 
-### Opción C — Netlify
+Sin esto todo funciona igual; la única diferencia es que un JSON roto llegaría a producción,
+así que conviene ejecutar `node scripts/validar.mjs` a mano antes de cada push.
 
-Arrastra la carpeta a <https://app.netlify.com/drop> para una prueba rápida, o conecta el
-repositorio para que se actualice con cada push. La configuración ya está en
+### Otras opciones de hosting gratuito
+
+**Cloudflare Pages** — panel de Cloudflare → *Workers & Pages → Create → Pages*, conecta el
+repositorio, build command `node scripts/validar.mjs`, output directory `/`. Sin límite de ancho
+de banda en el plan gratuito, red global y funciona también con repositorios privados.
+
+**Netlify** — arrastra la carpeta a <https://app.netlify.com/drop> para una prueba rápida, o
+conecta el repositorio para que se actualice con cada push. La configuración ya está en
 [`netlify.toml`](netlify.toml).
 
-### Después de desplegar
+### Al cambiar la interfaz
 
 Si cambias `index.html`, `app.js` o `styles.css`, sube el número de `VERSION` en
 [`sw.js`](sw.js). Sin eso, quien ya haya visitado el sitio verá los archivos antiguos
