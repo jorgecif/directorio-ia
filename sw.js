@@ -5,7 +5,7 @@
      con la copia en caché como respaldo si no hay conexión.
    Sube VERSION cuando cambies archivos del cascarón. */
 
-const VERSION = 'dir-ia-v1';
+const VERSION = 'dir-ia-v2';
 const CASCARON = [
   './',
   'index.html',

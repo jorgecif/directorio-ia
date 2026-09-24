@@ -51,6 +51,7 @@ const F = {
   conGratis: false,
   nuevas: false,
   favs: false,
+  verificadas: false,
 };
 
 let orden = 'destacados';
@@ -289,6 +290,7 @@ function filtrar() {
     if (F.oss && !h.oss) return false;
     if (F.conGratis && !tieneGratis(h)) return false;
     if (F.nuevas && !esNueva(h)) return false;
+    if (F.verificadas && !h.verificado) return false;
     if (F.favs && !favoritos.has(h.id)) return false;
     return true;
   });
@@ -394,6 +396,9 @@ function pintarFiltros() {
           <span class="op-txt">📖 Código abierto</span><span class="op-n">${cuentaSi((h) => h.oss)}</span></label>
         <label class="opcion"><input type="checkbox" id="f-nuevas"${F.nuevas ? ' checked' : ''}>
           <span class="op-txt">✨ Novedades</span><span class="op-n">${cuentaSi(esNueva)}</span></label>
+        <label class="opcion" title="Precio y estado comprobados en el sitio oficial en la ultima revision">
+          <input type="checkbox" id="f-verificadas"${F.verificadas ? ' checked' : ''}>
+          <span class="op-txt">✅ Precio comprobado</span><span class="op-n">${cuentaSi((h) => h.verificado)}</span></label>
         <label class="opcion"><input type="checkbox" id="f-favs"${F.favs ? ' checked' : ''}>
           <span class="op-txt">❤️ Solo favoritos</span><span class="op-n">${favoritos.size}</span></label>
       </div>
@@ -449,7 +454,8 @@ function pintarFiltros() {
     $('#f-es-txt').textContent = F.es === 0 ? 'Cualquiera' : `Mínimo ${'★'.repeat(F.es)}`;
     actualizar({ soloResultados: true });
   });
-  for (const [id, campo] of [['f-gratis', 'conGratis'], ['f-api', 'api'], ['f-oss', 'oss'], ['f-nuevas', 'nuevas'], ['f-favs', 'favs']]) {
+  for (const [id, campo] of [['f-gratis', 'conGratis'], ['f-api', 'api'], ['f-oss', 'oss'],
+    ['f-nuevas', 'nuevas'], ['f-verificadas', 'verificadas'], ['f-favs', 'favs']]) {
     $('#' + id).addEventListener('change', (e) => { F[campo] = e.target.checked; actualizar(); });
   }
 }
@@ -527,6 +533,7 @@ function pintarActivos() {
   if (F.oss) add('Código abierto', () => { F.oss = false; });
   if (F.conGratis) add('Con plan gratis', () => { F.conGratis = false; });
   if (F.nuevas) add('Novedades', () => { F.nuevas = false; });
+  if (F.verificadas) add('Precio comprobado', () => { F.verificadas = false; });
   if (F.favs) add('Favoritos', () => { F.favs = false; });
 
   cont.innerHTML = '';
@@ -550,7 +557,7 @@ function limpiarFiltros() {
   $('#q').value = '';
   F.cat.clear(); F.precio.clear(); F.priv.clear(); F.plat.clear(); F.nivel.clear();
   F.es = 0; F.max = null;
-  F.api = F.oss = F.conGratis = F.nuevas = F.favs = false;
+  F.api = F.oss = F.conGratis = F.nuevas = F.favs = F.verificadas = false;
   pintarFiltros();
   actualizar();
 }
@@ -730,7 +737,11 @@ function abrirDetalle(id) {
     </div>` : ''}
 
     <p style="color:var(--texto-3);font-size:12px;margin:16px 0 0">
-      Ficha añadida el ${esc(h.agregado)}. Precio de referencia, verifica en el sitio oficial.
+      Ficha añadida el ${esc(h.agregado)}.
+      ${h.verificado
+        ? `Precio y estado comprobados el <b style="color:var(--ok)">${esc(h.verificado)}</b>.`
+        : 'Precio <b style="color:var(--aviso)">sin comprobar</b> desde el alta.'}
+      Verifica siempre en el sitio oficial antes de contratar.
     </p>
   `;
 
@@ -1322,6 +1333,10 @@ function abrirStats() {
         <h4>Mantenimiento</h4>
         <div class="barra-fila"><div class="bf-top"><span>Última actualización</span><b>${esc(DB.meta.actualizado)}</b></div></div>
         <div class="barra-fila"><div class="bf-top"><span>Novedades (${DIAS_NOVEDAD} días)</span><b>${conteo(esNueva)}</b></div></div>
+        <div class="barra-fila">
+          <div class="bf-top"><span>Precio comprobado</span><b>${conteo((h) => h.verificado)} de ${n}</b></div>
+          <div class="barra-pista"><i style="width:${(conteo((h) => h.verificado) / n) * 100}%"></i></div>
+        </div>
         <div class="barra-fila"><div class="bf-top"><span>Versión de los datos</span><b>${esc(DB.meta.version || '—')}</b></div></div>
       </div>
     </div>
@@ -1448,6 +1463,7 @@ function guardarURL() {
   if (F.oss) p.set('oss', '1');
   if (F.conGratis) p.set('gratis', '1');
   if (F.nuevas) p.set('nuevas', '1');
+  if (F.verificadas) p.set('verificadas', '1');
   if (F.favs) p.set('favs', '1');
   if (orden !== 'destacados') p.set('orden', orden);
   if (vista !== 'grid') p.set('vista', vista);
@@ -1472,6 +1488,7 @@ function cargarURL() {
   F.oss = p.get('oss') === '1';
   F.conGratis = p.get('gratis') === '1';
   F.nuevas = p.get('nuevas') === '1';
+  F.verificadas = p.get('verificadas') === '1';
   F.favs = p.get('favs') === '1';
   if (p.has('orden')) orden = p.get('orden');
   if (p.has('vista')) vista = p.get('vista');

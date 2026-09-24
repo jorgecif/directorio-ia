@@ -65,6 +65,9 @@ for (const [i, h] of (db.herramientas || []).entries()) {
   if (![1, 2, 3].includes(h.nivel)) err(`${donde}: "nivel" debe ser 1, 2 o 3`);
   if (!(h.score >= 0 && h.score <= 10)) err(`${donde}: "score" debe estar entre 0 y 10`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(h.agregado || '')) err(`${donde}: "agregado" debe tener formato YYYY-MM-DD`);
+  if (h.verificado !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(h.verificado)) {
+    err(`${donde}: "verificado" debe tener formato YYYY-MM-DD (o no estar)`);
+  }
 
   if (h.precio === 'pago' && h.desde === 0) avi(`${donde}: marcada como "pago" pero desde = 0`);
   if ((h.precio === 'gratis' || h.precio === 'oss') && h.desde > 0) {
@@ -109,13 +112,25 @@ for (const c of cats) {
 const total = db.herramientas.length;
 const porPrecio = PRECIOS.map((p) => `${p}: ${db.herramientas.filter((h) => h.precio === p).length}`);
 
+// Antiguedad de la verificacion, medida contra la fecha del catalogo.
+const ref = Date.parse(db.meta.actualizado);
+const DIAS = 864e5;
+const verificadas = db.herramientas.filter((h) => h.verificado);
+const caducadas = verificadas.filter((h) => (ref - Date.parse(h.verificado)) / DIAS > 180);
+const sinVerificar = total - verificadas.length;
+
 console.log('');
 console.log(`  Directorio: ${total} herramientas en ${cats.size} categorias`);
 console.log(`  Precio -> ${porPrecio.join('  |  ')}`);
 console.log(`  Con plan gratuito: ${db.herramientas.filter((h) => h.precio !== 'pago').length}`);
 console.log(`  Codigo abierto: ${db.herramientas.filter((h) => h.oss).length}`);
+console.log(`  Precio verificado: ${verificadas.length} de ${total} (${sinVerificar} sin revisar desde el alta)`);
 console.log(`  Actualizado: ${db.meta.actualizado}`);
 console.log('');
+
+if (caducadas.length) {
+  avi(`${caducadas.length} herramientas llevan mas de 180 dias sin verificar: ${caducadas.slice(0, 8).map((h) => h.id).join(', ')}${caducadas.length > 8 ? '...' : ''}`);
+}
 
 if (avisos.length) {
   console.log(`  Avisos (${avisos.length}):`);

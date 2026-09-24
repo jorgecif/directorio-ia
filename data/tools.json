@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.0.0",
-    "actualizado": "2026-07-29",
+    "version": "1.0.1",
+    "actualizado": "2026-09-24",
     "moneda": "USD",
     "nota": "Los precios son de referencia (plan individual mensual mas economico de pago) y cambian con frecuencia. Verifica siempre en el sitio oficial antes de contratar.",
     "leyenda": {
@@ -18,31 +18,116 @@
         "entrena": "Entrena con tus datos salvo plan empresarial"
       },
       "es": "Calidad de soporte en espanol, de 1 a 5",
-      "nivel": "1 principiante, 2 intermedio, 3 avanzado"
+      "nivel": "1 principiante, 2 intermedio, 3 avanzado",
+      "verificado": "Fecha en que se comprobaron precio y estado en el sitio oficial. Si falta, el dato no se ha revisado desde el alta."
     }
   },
   "categorias": [
-    { "id": "chat", "nombre": "Chat y asistentes", "emoji": "💬" },
-    { "id": "escritura", "nombre": "Escritura y redaccion", "emoji": "✍️" },
-    { "id": "imagen", "nombre": "Generacion de imagenes", "emoji": "🎨" },
-    { "id": "edicion-img", "nombre": "Edicion y mejora de imagen", "emoji": "🖼️" },
-    { "id": "video", "nombre": "Video", "emoji": "🎬" },
-    { "id": "audio", "nombre": "Audio y voz", "emoji": "🎙️" },
-    { "id": "musica", "nombre": "Musica", "emoji": "🎵" },
-    { "id": "transcripcion", "nombre": "Transcripcion y reuniones", "emoji": "📝" },
-    { "id": "codigo", "nombre": "Programacion", "emoji": "💻" },
-    { "id": "no-code", "nombre": "Apps sin codigo", "emoji": "🧱" },
-    { "id": "productividad", "nombre": "Productividad", "emoji": "⚡" },
-    { "id": "investigacion", "nombre": "Investigacion y academia", "emoji": "🔬" },
-    { "id": "presentaciones", "nombre": "Presentaciones y documentos", "emoji": "📊" },
-    { "id": "diseno", "nombre": "Diseno y UI", "emoji": "🎭" },
-    { "id": "agentes", "nombre": "Agentes y automatizacion", "emoji": "🤖" },
-    { "id": "marketing", "nombre": "Marketing y ventas", "emoji": "📣" },
-    { "id": "datos", "nombre": "Datos y analisis", "emoji": "📈" },
-    { "id": "3d", "nombre": "3D y modelado", "emoji": "🧊" },
-    { "id": "educacion", "nombre": "Educacion", "emoji": "🎓" },
-    { "id": "busqueda", "nombre": "Busqueda y respuestas", "emoji": "🔍" },
-    { "id": "local", "nombre": "Ejecucion local y privada", "emoji": "🔒" }
+    {
+      "id": "chat",
+      "nombre": "Chat y asistentes",
+      "emoji": "💬"
+    },
+    {
+      "id": "escritura",
+      "nombre": "Escritura y redaccion",
+      "emoji": "✍️"
+    },
+    {
+      "id": "imagen",
+      "nombre": "Generacion de imagenes",
+      "emoji": "🎨"
+    },
+    {
+      "id": "edicion-img",
+      "nombre": "Edicion y mejora de imagen",
+      "emoji": "🖼️"
+    },
+    {
+      "id": "video",
+      "nombre": "Video",
+      "emoji": "🎬"
+    },
+    {
+      "id": "audio",
+      "nombre": "Audio y voz",
+      "emoji": "🎙️"
+    },
+    {
+      "id": "musica",
+      "nombre": "Musica",
+      "emoji": "🎵"
+    },
+    {
+      "id": "transcripcion",
+      "nombre": "Transcripcion y reuniones",
+      "emoji": "📝"
+    },
+    {
+      "id": "codigo",
+      "nombre": "Programacion",
+      "emoji": "💻"
+    },
+    {
+      "id": "no-code",
+      "nombre": "Apps sin codigo",
+      "emoji": "🧱"
+    },
+    {
+      "id": "productividad",
+      "nombre": "Productividad",
+      "emoji": "⚡"
+    },
+    {
+      "id": "investigacion",
+      "nombre": "Investigacion y academia",
+      "emoji": "🔬"
+    },
+    {
+      "id": "presentaciones",
+      "nombre": "Presentaciones y documentos",
+      "emoji": "📊"
+    },
+    {
+      "id": "diseno",
+      "nombre": "Diseno y UI",
+      "emoji": "🎭"
+    },
+    {
+      "id": "agentes",
+      "nombre": "Agentes y automatizacion",
+      "emoji": "🤖"
+    },
+    {
+      "id": "marketing",
+      "nombre": "Marketing y ventas",
+      "emoji": "📣"
+    },
+    {
+      "id": "datos",
+      "nombre": "Datos y analisis",
+      "emoji": "📈"
+    },
+    {
+      "id": "3d",
+      "nombre": "3D y modelado",
+      "emoji": "🧊"
+    },
+    {
+      "id": "educacion",
+      "nombre": "Educacion",
+      "emoji": "🎓"
+    },
+    {
+      "id": "busqueda",
+      "nombre": "Busqueda y respuestas",
+      "emoji": "🔍"
+    },
+    {
+      "id": "local",
+      "nombre": "Ejecucion local y privada",
+      "emoji": "🔒"
+    }
   ],
   "herramientas": [
     {
@@ -50,22 +135,44 @@
       "nombre": "ChatGPT",
       "empresa": "OpenAI",
       "url": "https://chatgpt.com",
-      "desc": "El asistente de IA mas usado del mundo. Escribe, programa, analiza archivos, navega la web, genera imagenes y ejecuta tareas agenticas.",
-      "cat": ["chat", "escritura", "codigo", "busqueda"],
+      "desc": "El asistente de IA más usado del mundo. Escribe, programa, analiza archivos, navega la web, genera imágenes y ejecuta tareas agénticas. Hay un plan Go más barato en algunos países.",
+      "cat": [
+        "chat",
+        "escritura",
+        "codigo",
+        "busqueda"
+      ],
       "precio": "freemium",
       "desde": 20,
-      "gratis": "Acceso al modelo principal con limites diarios, subida de archivos e imagenes",
+      "gratis": "Acceso al modelo principal con límites diarios, subida de archivos e imágenes",
       "api": true,
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android", "win", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Redactar y corregir textos", "Analizar documentos", "Programar", "Estudiar"],
-      "alt": ["claude", "gemini", "deepseek", "huggingchat"],
+      "usos": [
+        "Redactar y corregir textos",
+        "Analizar documentos",
+        "Programar",
+        "Estudiar"
+      ],
+      "alt": [
+        "claude",
+        "gemini",
+        "deepseek",
+        "huggingchat"
+      ],
       "score": 9.5,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "claude",
@@ -73,7 +180,11 @@
       "empresa": "Anthropic",
       "url": "https://claude.ai",
       "desc": "Asistente enfocado en razonamiento largo, escritura de calidad y programacion. Destaca en documentos extensos y trabajo con codigo real.",
-      "cat": ["chat", "escritura", "codigo"],
+      "cat": [
+        "chat",
+        "escritura",
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "Uso diario limitado del modelo, subida de archivos y proyectos basicos",
@@ -81,21 +192,44 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android", "win", "mac", "cli"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac",
+        "cli"
+      ],
       "nivel": 1,
-      "usos": ["Escritura profesional", "Analisis de documentos largos", "Programar", "Investigacion"],
-      "alt": ["chatgpt", "gemini", "mistral-lechat", "deepseek"],
+      "usos": [
+        "Escritura profesional",
+        "Analisis de documentos largos",
+        "Programar",
+        "Investigacion"
+      ],
+      "alt": [
+        "chatgpt",
+        "gemini",
+        "mistral-lechat",
+        "deepseek"
+      ],
       "score": 9.4,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "gemini",
       "nombre": "Gemini",
       "empresa": "Google",
       "url": "https://gemini.google.com",
-      "desc": "Asistente de Google integrado con Gmail, Drive, Docs y YouTube. Muy fuerte en multimodal (imagen, audio y video de entrada).",
-      "cat": ["chat", "escritura", "productividad", "imagen"],
+      "desc": "Asistente de Google integrado con Gmail, Drive, Docs y YouTube. Muy fuerte en multimodal y en generación de imagen. Tiene un plan AI Plus de entrada por 4,99 $.",
+      "cat": [
+        "chat",
+        "escritura",
+        "productividad",
+        "imagen"
+      ],
       "precio": "freemium",
       "desde": 19.99,
       "gratis": "Modelo estandar sin costo, integracion basica con la cuenta de Google",
@@ -103,13 +237,27 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Resumir correos y videos", "Trabajar dentro de Google Workspace", "Generar imagenes"],
-      "alt": ["chatgpt", "claude", "copilot-ms", "qwen-chat"],
+      "usos": [
+        "Resumir correos y videos",
+        "Trabajar dentro de Google Workspace",
+        "Generar imagenes"
+      ],
+      "alt": [
+        "chatgpt",
+        "claude",
+        "copilot-ms",
+        "qwen-chat"
+      ],
       "score": 9.2,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "copilot-ms",
@@ -117,7 +265,11 @@
       "empresa": "Microsoft",
       "url": "https://copilot.microsoft.com",
       "desc": "Asistente de Microsoft con busqueda web, generacion de imagenes y conexion con Windows y Edge. Version gratuita bastante completa.",
-      "cat": ["chat", "busqueda", "productividad"],
+      "cat": [
+        "chat",
+        "busqueda",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "Chat ilimitado con busqueda web y generacion de imagenes",
@@ -125,10 +277,23 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android", "win"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win"
+      ],
       "nivel": 1,
-      "usos": ["Buscar con citas", "Redactar", "Crear imagenes gratis"],
-      "alt": ["chatgpt", "gemini", "perplexity"],
+      "usos": [
+        "Buscar con citas",
+        "Redactar",
+        "Crear imagenes gratis"
+      ],
+      "alt": [
+        "chatgpt",
+        "gemini",
+        "perplexity"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -138,8 +303,12 @@
       "nombre": "Perplexity",
       "empresa": "Perplexity AI",
       "url": "https://perplexity.ai",
-      "desc": "Buscador con IA que responde con fuentes citadas. El mejor reemplazo de Google cuando necesitas respuestas verificables.",
-      "cat": ["busqueda", "investigacion", "chat"],
+      "desc": "Buscador con IA que responde con fuentes citadas. Incluye el navegador Comet, gratuito para todo el mundo desde oct-2025.",
+      "cat": [
+        "busqueda",
+        "investigacion",
+        "chat"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "Busquedas ilimitadas basicas y algunas busquedas avanzadas al dia",
@@ -147,13 +316,28 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android", "ext"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Investigar con fuentes", "Comparar productos", "Noticias verificadas"],
-      "alt": ["copilot-ms", "you-com", "exa", "phind"],
-      "score": 9.0,
+      "usos": [
+        "Investigar con fuentes",
+        "Comparar productos",
+        "Noticias verificadas"
+      ],
+      "alt": [
+        "copilot-ms",
+        "you-com",
+        "exa",
+        "phind"
+      ],
+      "score": 9,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "deepseek",
@@ -161,7 +345,11 @@
       "empresa": "DeepSeek",
       "url": "https://chat.deepseek.com",
       "desc": "Asistente chino con modelos de razonamiento muy potentes, gratis en la web y con la API mas barata del mercado. Modelos con pesos abiertos.",
-      "cat": ["chat", "codigo", "local"],
+      "cat": [
+        "chat",
+        "codigo",
+        "local"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Uso web ilimitado en la practica, incluido el modo razonamiento",
@@ -169,10 +357,23 @@
       "oss": true,
       "es": 4,
       "priv": "entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Programar sin costo", "Matematicas y razonamiento", "Alternativa gratis a ChatGPT"],
-      "alt": ["qwen-chat", "huggingchat", "mistral-lechat", "ollama"],
+      "usos": [
+        "Programar sin costo",
+        "Matematicas y razonamiento",
+        "Alternativa gratis a ChatGPT"
+      ],
+      "alt": [
+        "qwen-chat",
+        "huggingchat",
+        "mistral-lechat",
+        "ollama"
+      ],
       "score": 8.8,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -183,7 +384,11 @@
       "empresa": "Mistral AI",
       "url": "https://chat.mistral.ai",
       "desc": "Asistente europeo, rapido y con foco en privacidad y cumplimiento del RGPD. Buena opcion si los datos deben quedarse en la UE.",
-      "cat": ["chat", "escritura", "codigo"],
+      "cat": [
+        "chat",
+        "escritura",
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 14.99,
       "gratis": "Chat con limites generosos, busqueda web y generacion de imagenes",
@@ -191,10 +396,22 @@
       "oss": true,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Uso corporativo en la UE", "Redaccion rapida", "Programar"],
-      "alt": ["claude", "deepseek", "huggingchat"],
+      "usos": [
+        "Uso corporativo en la UE",
+        "Redaccion rapida",
+        "Programar"
+      ],
+      "alt": [
+        "claude",
+        "deepseek",
+        "huggingchat"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -205,7 +422,11 @@
       "empresa": "xAI",
       "url": "https://grok.com",
       "desc": "Asistente de xAI con acceso en tiempo real a X (Twitter). Tono mas suelto y buena generacion de imagenes sin filtros excesivos.",
-      "cat": ["chat", "imagen", "busqueda"],
+      "cat": [
+        "chat",
+        "imagen",
+        "busqueda"
+      ],
       "precio": "freemium",
       "desde": 30,
       "gratis": "Consultas limitadas cada pocas horas",
@@ -213,13 +434,26 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Analizar tendencias en X", "Generar imagenes", "Chat sin filtros rigidos"],
-      "alt": ["chatgpt", "gemini", "meta-ai"],
-      "score": 8.0,
+      "usos": [
+        "Analizar tendencias en X",
+        "Generar imagenes",
+        "Chat sin filtros rigidos"
+      ],
+      "alt": [
+        "chatgpt",
+        "gemini",
+        "meta-ai"
+      ],
+      "score": 8,
       "destacado": false,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "meta-ai",
@@ -227,7 +461,10 @@
       "empresa": "Meta",
       "url": "https://meta.ai",
       "desc": "Asistente gratuito basado en Llama, integrado en WhatsApp, Instagram y Messenger. Cero friccion para usuarios no tecnicos.",
-      "cat": ["chat", "imagen"],
+      "cat": [
+        "chat",
+        "imagen"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Todo el producto es gratuito",
@@ -235,10 +472,22 @@
       "oss": true,
       "es": 4,
       "priv": "entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Consultas rapidas en WhatsApp", "Generar imagenes", "Primer contacto con IA"],
-      "alt": ["gemini", "copilot-ms", "deepseek"],
+      "usos": [
+        "Consultas rapidas en WhatsApp",
+        "Generar imagenes",
+        "Primer contacto con IA"
+      ],
+      "alt": [
+        "gemini",
+        "copilot-ms",
+        "deepseek"
+      ],
       "score": 7.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -249,7 +498,11 @@
       "empresa": "Quora",
       "url": "https://poe.com",
       "desc": "Un solo lugar para hablar con decenas de modelos (GPT, Claude, Gemini, Llama, generadores de imagen y video) con una sola suscripcion.",
-      "cat": ["chat", "imagen", "video"],
+      "cat": [
+        "chat",
+        "imagen",
+        "video"
+      ],
       "precio": "freemium",
       "desde": 19.99,
       "gratis": "Creditos diarios repartibles entre todos los modelos",
@@ -257,10 +510,23 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "mac"
+      ],
       "nivel": 2,
-      "usos": ["Comparar modelos", "Pagar una sola suscripcion", "Crear bots propios"],
-      "alt": ["huggingchat", "openrouter", "chatgpt"],
+      "usos": [
+        "Comparar modelos",
+        "Pagar una sola suscripcion",
+        "Crear bots propios"
+      ],
+      "alt": [
+        "huggingchat",
+        "openrouter",
+        "chatgpt"
+      ],
       "score": 8.1,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -271,7 +537,11 @@
       "empresa": "OpenRouter",
       "url": "https://openrouter.ai",
       "desc": "Pasarela unica hacia cientos de modelos de IA con una sola API y saldo prepago. Incluye varios modelos gratuitos.",
-      "cat": ["chat", "codigo", "agentes"],
+      "cat": [
+        "chat",
+        "codigo",
+        "agentes"
+      ],
       "precio": "freemium",
       "desde": 0,
       "gratis": "Varios modelos con nivel gratuito y chat web sin costo",
@@ -279,10 +549,20 @@
       "oss": false,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 2,
-      "usos": ["Probar modelos sin varias cuentas", "Abaratar costos de API", "Failover entre proveedores"],
-      "alt": ["poe", "huggingchat"],
+      "usos": [
+        "Probar modelos sin varias cuentas",
+        "Abaratar costos de API",
+        "Failover entre proveedores"
+      ],
+      "alt": [
+        "poe",
+        "huggingchat"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -293,7 +573,10 @@
       "empresa": "Hugging Face",
       "url": "https://huggingface.co/chat",
       "desc": "Chat totalmente gratuito con los mejores modelos abiertos del momento. Sin tarjeta y con codigo auditable.",
-      "cat": ["chat", "local"],
+      "cat": [
+        "chat",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Acceso completo sin costo a modelos abiertos",
@@ -301,10 +584,20 @@
       "oss": true,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Usar modelos abiertos sin instalar nada", "Alternativa 100% gratis", "Comparar modelos abiertos"],
-      "alt": ["deepseek", "qwen-chat", "ollama"],
+      "usos": [
+        "Usar modelos abiertos sin instalar nada",
+        "Alternativa 100% gratis",
+        "Comparar modelos abiertos"
+      ],
+      "alt": [
+        "deepseek",
+        "qwen-chat",
+        "ollama"
+      ],
       "score": 7.8,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -315,7 +608,12 @@
       "empresa": "Alibaba",
       "url": "https://chat.qwen.ai",
       "desc": "Asistente gratuito de Alibaba con modelos abiertos muy competentes, generacion de imagen y video incluidas sin costo.",
-      "cat": ["chat", "imagen", "video", "codigo"],
+      "cat": [
+        "chat",
+        "imagen",
+        "video",
+        "codigo"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Chat, imagen y video sin costo con limites amplios",
@@ -323,10 +621,22 @@
       "oss": true,
       "es": 3,
       "priv": "entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Generar video gratis", "Programar sin costo", "Modelos abiertos"],
-      "alt": ["deepseek", "huggingchat", "kimi"],
+      "usos": [
+        "Generar video gratis",
+        "Programar sin costo",
+        "Modelos abiertos"
+      ],
+      "alt": [
+        "deepseek",
+        "huggingchat",
+        "kimi"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -337,7 +647,11 @@
       "empresa": "Moonshot AI",
       "url": "https://kimi.com",
       "desc": "Asistente con contexto muy largo y modo agente, gratuito y con modelos abiertos. Excelente para leer documentos enormes.",
-      "cat": ["chat", "investigacion", "agentes"],
+      "cat": [
+        "chat",
+        "investigacion",
+        "agentes"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Uso completo sin costo",
@@ -345,11 +659,23 @@
       "oss": true,
       "es": 3,
       "priv": "entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 2,
-      "usos": ["Leer libros o informes completos", "Investigacion profunda gratis", "Tareas agenticas"],
-      "alt": ["deepseek", "qwen-chat", "claude"],
-      "score": 8.0,
+      "usos": [
+        "Leer libros o informes completos",
+        "Investigacion profunda gratis",
+        "Tareas agenticas"
+      ],
+      "alt": [
+        "deepseek",
+        "qwen-chat",
+        "claude"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-07-10"
     },
@@ -359,7 +685,11 @@
       "empresa": "Ollama",
       "url": "https://ollama.com",
       "desc": "La forma mas sencilla de ejecutar modelos de IA en tu propio equipo. Un comando y tienes un modelo corriendo sin internet.",
-      "cat": ["local", "chat", "codigo"],
+      "cat": [
+        "local",
+        "chat",
+        "codigo"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Software libre y gratuito, sin limites de uso",
@@ -367,11 +697,24 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["win", "mac", "linux", "cli"],
+      "plat": [
+        "win",
+        "mac",
+        "linux",
+        "cli"
+      ],
       "nivel": 2,
-      "usos": ["IA sin enviar datos a la nube", "Trabajar sin internet", "Base para apps propias"],
-      "alt": ["lm-studio", "jan", "gpt4all"],
-      "score": 9.0,
+      "usos": [
+        "IA sin enviar datos a la nube",
+        "Trabajar sin internet",
+        "Base para apps propias"
+      ],
+      "alt": [
+        "lm-studio",
+        "jan",
+        "gpt4all"
+      ],
+      "score": 9,
       "destacado": true,
       "agregado": "2026-06-01"
     },
@@ -381,7 +724,10 @@
       "empresa": "LM Studio",
       "url": "https://lmstudio.ai",
       "desc": "App de escritorio con interfaz grafica para descargar y usar modelos locales. La puerta de entrada mas amable a la IA local.",
-      "cat": ["local", "chat"],
+      "cat": [
+        "local",
+        "chat"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Gratis para uso personal y profesional",
@@ -389,10 +735,22 @@
       "oss": false,
       "es": 3,
       "priv": "local",
-      "plat": ["win", "mac", "linux"],
+      "plat": [
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 1,
-      "usos": ["Probar modelos locales sin terminal", "Chat privado offline", "Servidor local compatible con OpenAI"],
-      "alt": ["ollama", "jan", "gpt4all"],
+      "usos": [
+        "Probar modelos locales sin terminal",
+        "Chat privado offline",
+        "Servidor local compatible con OpenAI"
+      ],
+      "alt": [
+        "ollama",
+        "jan",
+        "gpt4all"
+      ],
       "score": 8.7,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -403,7 +761,10 @@
       "empresa": "Menlo Research",
       "url": "https://jan.ai",
       "desc": "Alternativa de codigo abierto a ChatGPT que corre 100% offline en tu equipo, con interfaz limpia y extensiones.",
-      "cat": ["local", "chat"],
+      "cat": [
+        "local",
+        "chat"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Todo el producto es libre y gratuito",
@@ -411,10 +772,22 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["win", "mac", "linux"],
+      "plat": [
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 2,
-      "usos": ["Privacidad total", "Trabajo offline", "Auditar el codigo que ejecutas"],
-      "alt": ["ollama", "lm-studio", "open-webui"],
+      "usos": [
+        "Privacidad total",
+        "Trabajo offline",
+        "Auditar el codigo que ejecutas"
+      ],
+      "alt": [
+        "ollama",
+        "lm-studio",
+        "open-webui"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -425,7 +798,11 @@
       "empresa": "Open WebUI",
       "url": "https://openwebui.com",
       "desc": "Interfaz web autoalojable tipo ChatGPT para modelos locales o de API, con usuarios, RAG y permisos. Ideal para equipos.",
-      "cat": ["local", "chat", "agentes"],
+      "cat": [
+        "local",
+        "chat",
+        "agentes"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Libre y gratuito, se instala en tu servidor",
@@ -433,10 +810,23 @@
       "oss": true,
       "es": 4,
       "priv": "local",
-      "plat": ["web", "linux", "win", "mac"],
+      "plat": [
+        "web",
+        "linux",
+        "win",
+        "mac"
+      ],
       "nivel": 3,
-      "usos": ["ChatGPT interno para la empresa", "RAG sobre documentos propios", "Control de acceso por usuario"],
-      "alt": ["anythingllm", "jan", "dify"],
+      "usos": [
+        "ChatGPT interno para la empresa",
+        "RAG sobre documentos propios",
+        "Control de acceso por usuario"
+      ],
+      "alt": [
+        "anythingllm",
+        "jan",
+        "dify"
+      ],
       "score": 8.8,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -447,7 +837,11 @@
       "empresa": "Mintplex Labs",
       "url": "https://anythingllm.com",
       "desc": "App todo en uno para chatear con tus documentos usando modelos locales o de API, con espacios de trabajo separados.",
-      "cat": ["local", "investigacion", "agentes"],
+      "cat": [
+        "local",
+        "investigacion",
+        "agentes"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Version de escritorio y autoalojada gratuitas",
@@ -455,10 +849,23 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["win", "mac", "linux", "web"],
+      "plat": [
+        "win",
+        "mac",
+        "linux",
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Chat con PDFs privados", "Base de conocimiento interna", "Agentes con documentos"],
-      "alt": ["open-webui", "notebooklm", "dify"],
+      "usos": [
+        "Chat con PDFs privados",
+        "Base de conocimiento interna",
+        "Agentes con documentos"
+      ],
+      "alt": [
+        "open-webui",
+        "notebooklm",
+        "dify"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -469,7 +876,10 @@
       "empresa": "Nomic AI",
       "url": "https://gpt4all.io",
       "desc": "Cliente local muy ligero que funciona incluso en equipos modestos y sin GPU dedicada.",
-      "cat": ["local", "chat"],
+      "cat": [
+        "local",
+        "chat"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Libre y gratuito",
@@ -477,10 +887,22 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["win", "mac", "linux"],
+      "plat": [
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 2,
-      "usos": ["IA en equipos con pocos recursos", "Privacidad total", "Chat con documentos locales"],
-      "alt": ["ollama", "lm-studio", "jan"],
+      "usos": [
+        "IA en equipos con pocos recursos",
+        "Privacidad total",
+        "Chat con documentos locales"
+      ],
+      "alt": [
+        "ollama",
+        "lm-studio",
+        "jan"
+      ],
       "score": 7.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -490,8 +912,11 @@
       "nombre": "Midjourney",
       "empresa": "Midjourney",
       "url": "https://midjourney.com",
-      "desc": "El generador de imagenes con mejor calidad estetica del mercado. Referencia para arte conceptual, editorial y publicidad.",
-      "cat": ["imagen", "diseno"],
+      "desc": "El generador de imágenes con mejor calidad estética del mercado, ahora también con vídeo. Sin plan gratuito: el acceso más barato es Basic, y Standard (30 $) añade generación ilimitada en modo relax.",
+      "cat": [
+        "imagen",
+        "diseno"
+      ],
       "precio": "pago",
       "desde": 10,
       "gratis": null,
@@ -499,13 +924,25 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Arte conceptual", "Imagenes publicitarias", "Moodboards"],
-      "alt": ["flux", "leonardo", "comfyui", "krea"],
+      "usos": [
+        "Arte conceptual",
+        "Imagenes publicitarias",
+        "Moodboards"
+      ],
+      "alt": [
+        "flux",
+        "leonardo",
+        "comfyui",
+        "krea"
+      ],
       "score": 9.3,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "comfyui",
@@ -513,7 +950,11 @@
       "empresa": "Comfy Org",
       "url": "https://comfy.org",
       "desc": "Editor visual por nodos para Stable Diffusion y FLUX. Control total del proceso, gratis y ejecutable en tu propia GPU.",
-      "cat": ["imagen", "video", "local"],
+      "cat": [
+        "imagen",
+        "video",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Software libre, solo necesitas una GPU o servicio en la nube",
@@ -521,11 +962,23 @@
       "oss": true,
       "es": 2,
       "priv": "local",
-      "plat": ["win", "mac", "linux"],
+      "plat": [
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 3,
-      "usos": ["Pipelines de imagen a medida", "Generacion masiva sin costo por imagen", "Control fino de estilo"],
-      "alt": ["fooocus", "midjourney", "krea"],
-      "score": 9.0,
+      "usos": [
+        "Pipelines de imagen a medida",
+        "Generacion masiva sin costo por imagen",
+        "Control fino de estilo"
+      ],
+      "alt": [
+        "fooocus",
+        "midjourney",
+        "krea"
+      ],
+      "score": 9,
       "destacado": true,
       "agregado": "2026-06-01"
     },
@@ -535,7 +988,10 @@
       "empresa": "Comunidad",
       "url": "https://github.com/lllyasviel/Fooocus",
       "desc": "Stable Diffusion sin complicaciones: escribes el prompt y listo. La opcion local mas facil para quien no quiere aprender nodos.",
-      "cat": ["imagen", "local"],
+      "cat": [
+        "imagen",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Libre y gratuito",
@@ -543,11 +999,22 @@
       "oss": true,
       "es": 2,
       "priv": "local",
-      "plat": ["win", "linux"],
+      "plat": [
+        "win",
+        "linux"
+      ],
       "nivel": 2,
-      "usos": ["Generar imagenes gratis en local", "Aprender IA de imagen", "Uso sin conexion"],
-      "alt": ["comfyui", "leonardo", "krea"],
-      "score": 8.0,
+      "usos": [
+        "Generar imagenes gratis en local",
+        "Aprender IA de imagen",
+        "Uso sin conexion"
+      ],
+      "alt": [
+        "comfyui",
+        "leonardo",
+        "krea"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -557,7 +1024,11 @@
       "empresa": "Canva",
       "url": "https://leonardo.ai",
       "desc": "Plataforma completa de generacion y edicion de imagen con modelos propios, entrenamiento de estilos y buen plan gratuito.",
-      "cat": ["imagen", "edicion-img", "diseno"],
+      "cat": [
+        "imagen",
+        "edicion-img",
+        "diseno"
+      ],
       "precio": "freemium",
       "desde": 12,
       "gratis": "Creditos diarios renovables suficientes para uso casual",
@@ -565,10 +1036,23 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Assets para juegos", "Imagenes de marca", "Entrenar un estilo propio"],
-      "alt": ["krea", "ideogram", "comfyui", "playground"],
+      "usos": [
+        "Assets para juegos",
+        "Imagenes de marca",
+        "Entrenar un estilo propio"
+      ],
+      "alt": [
+        "krea",
+        "ideogram",
+        "comfyui",
+        "playground"
+      ],
       "score": 8.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -579,7 +1063,11 @@
       "empresa": "Ideogram",
       "url": "https://ideogram.ai",
       "desc": "El mejor generador para imagenes con texto legible dentro: logos, carteles, portadas y tipografia.",
-      "cat": ["imagen", "diseno", "marketing"],
+      "cat": [
+        "imagen",
+        "diseno",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 8,
       "gratis": "Generaciones diarias gratuitas con marca de agua opcional",
@@ -587,10 +1075,22 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Carteles y flyers", "Logos y tipografia", "Portadas con texto"],
-      "alt": ["recraft", "firefly", "canva"],
+      "usos": [
+        "Carteles y flyers",
+        "Logos y tipografia",
+        "Portadas con texto"
+      ],
+      "alt": [
+        "recraft",
+        "firefly",
+        "canva"
+      ],
       "score": 8.7,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -601,7 +1101,12 @@
       "empresa": "Adobe",
       "url": "https://firefly.adobe.com",
       "desc": "Generador de Adobe entrenado con contenido licenciado, con indemnizacion legal para uso comercial. Integrado en Photoshop e Illustrator.",
-      "cat": ["imagen", "edicion-img", "video", "diseno"],
+      "cat": [
+        "imagen",
+        "edicion-img",
+        "video",
+        "diseno"
+      ],
       "precio": "freemium",
       "desde": 9.99,
       "gratis": "Creditos mensuales gratuitos",
@@ -609,21 +1114,36 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Uso comercial sin riesgo legal", "Relleno generativo", "Vectores y plantillas"],
-      "alt": ["canva", "ideogram", "recraft"],
+      "usos": [
+        "Uso comercial sin riesgo legal",
+        "Relleno generativo",
+        "Vectores y plantillas"
+      ],
+      "alt": [
+        "canva",
+        "ideogram",
+        "recraft"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
     },
     {
       "id": "flux",
-      "nombre": "FLUX",
+      "nombre": "FLUX.2",
       "empresa": "Black Forest Labs",
       "url": "https://bfl.ai",
-      "desc": "Familia de modelos de imagen de altisima calidad, con versiones de pesos abiertos que puedes ejecutar en tu equipo.",
-      "cat": ["imagen", "local"],
+      "desc": "Familia de modelos de imagen de altísima calidad. FLUX.2 (ene-2026) sustituye a las versiones anteriores y mantiene una variante abierta que puedes ejecutar en tu equipo.",
+      "cat": [
+        "imagen",
+        "local"
+      ],
       "precio": "freemium",
       "desde": 0,
       "gratis": "Modelos abiertos descargables sin costo; API de pago por uso",
@@ -631,13 +1151,27 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["web", "api", "linux", "win"],
+      "plat": [
+        "web",
+        "api",
+        "linux",
+        "win"
+      ],
       "nivel": 3,
-      "usos": ["Calidad tipo Midjourney sin suscripcion", "Integrar imagen en productos", "Edicion por instrucciones"],
-      "alt": ["comfyui", "midjourney", "recraft"],
-      "score": 9.0,
+      "usos": [
+        "Calidad tipo Midjourney sin suscripcion",
+        "Integrar imagen en productos",
+        "Edicion por instrucciones"
+      ],
+      "alt": [
+        "comfyui",
+        "midjourney",
+        "recraft"
+      ],
+      "score": 9,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "recraft",
@@ -645,7 +1179,11 @@
       "empresa": "Recraft",
       "url": "https://recraft.ai",
       "desc": "Generador orientado a diseno profesional: vectores SVG editables, iconos, mockups y consistencia de estilo de marca.",
-      "cat": ["imagen", "diseno", "marketing"],
+      "cat": [
+        "imagen",
+        "diseno",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 12,
       "gratis": "Creditos diarios y exportacion basica",
@@ -653,10 +1191,20 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Iconos y vectores editables", "Identidad visual consistente", "Ilustracion editorial"],
-      "alt": ["ideogram", "firefly", "canva"],
+      "usos": [
+        "Iconos y vectores editables",
+        "Identidad visual consistente",
+        "Ilustracion editorial"
+      ],
+      "alt": [
+        "ideogram",
+        "firefly",
+        "canva"
+      ],
       "score": 8.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -667,7 +1215,11 @@
       "empresa": "Krea",
       "url": "https://krea.ai",
       "desc": "Generacion en tiempo real: dibujas y la imagen se genera mientras trazas. Tambien mejora, video y entrenamiento de estilos.",
-      "cat": ["imagen", "edicion-img", "video"],
+      "cat": [
+        "imagen",
+        "edicion-img",
+        "video"
+      ],
       "precio": "freemium",
       "desde": 10,
       "gratis": "Uso diario gratuito con creditos limitados",
@@ -675,10 +1227,20 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Bocetar ideas visuales rapido", "Mejorar resolucion", "Explorar estilos"],
-      "alt": ["leonardo", "playground", "comfyui"],
+      "usos": [
+        "Bocetar ideas visuales rapido",
+        "Mejorar resolucion",
+        "Explorar estilos"
+      ],
+      "alt": [
+        "leonardo",
+        "playground",
+        "comfyui"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -689,7 +1251,11 @@
       "empresa": "Freepik",
       "url": "https://freepik.com/ai",
       "desc": "Suite que reune varios modelos de imagen y video de terceros bajo una sola suscripcion, con banco de recursos incluido.",
-      "cat": ["imagen", "video", "diseno"],
+      "cat": [
+        "imagen",
+        "video",
+        "diseno"
+      ],
       "precio": "freemium",
       "desde": 12,
       "gratis": "Creditos diarios para imagen y algunas funciones de video",
@@ -697,10 +1263,20 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Acceder a varios modelos con un pago", "Recursos graficos listos", "Video corto de marca"],
-      "alt": ["poe", "leonardo", "canva"],
+      "usos": [
+        "Acceder a varios modelos con un pago",
+        "Recursos graficos listos",
+        "Video corto de marca"
+      ],
+      "alt": [
+        "poe",
+        "leonardo",
+        "canva"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -711,7 +1287,11 @@
       "empresa": "Microsoft",
       "url": "https://designer.microsoft.com",
       "desc": "Editor grafico con generacion de imagenes gratuita. Crea posts, invitaciones y banners sin pagar nada.",
-      "cat": ["imagen", "diseno", "marketing"],
+      "cat": [
+        "imagen",
+        "diseno",
+        "marketing"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Generacion de imagenes y plantillas sin costo con cuenta Microsoft",
@@ -719,10 +1299,22 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Redes sociales sin presupuesto", "Imagenes rapidas", "Plantillas editables"],
-      "alt": ["canva", "ideogram", "firefly"],
+      "usos": [
+        "Redes sociales sin presupuesto",
+        "Imagenes rapidas",
+        "Plantillas editables"
+      ],
+      "alt": [
+        "canva",
+        "ideogram",
+        "firefly"
+      ],
       "score": 7.9,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -733,7 +1325,10 @@
       "empresa": "Civitai",
       "url": "https://civitai.com",
       "desc": "La mayor biblioteca de modelos y estilos abiertos de imagen. Descarga LoRAs y checkpoints o genera en la nube con creditos.",
-      "cat": ["imagen", "local"],
+      "cat": [
+        "imagen",
+        "local"
+      ],
       "precio": "freemium",
       "desde": 5,
       "gratis": "Descarga ilimitada de modelos y creditos diarios de generacion",
@@ -741,10 +1336,20 @@
       "oss": true,
       "es": 2,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Encontrar estilos especificos", "Descargar modelos para ComfyUI", "Generar sin instalar nada"],
-      "alt": ["comfyui", "huggingchat", "fooocus"],
+      "usos": [
+        "Encontrar estilos especificos",
+        "Descargar modelos para ComfyUI",
+        "Generar sin instalar nada"
+      ],
+      "alt": [
+        "comfyui",
+        "huggingchat",
+        "fooocus"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -755,7 +1360,11 @@
       "empresa": "Playground",
       "url": "https://playground.com",
       "desc": "Editor de imagen con IA orientado a graficos de marketing: logos, camisetas, posts y carteles con plantillas.",
-      "cat": ["imagen", "diseno", "marketing"],
+      "cat": [
+        "imagen",
+        "diseno",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 15,
       "gratis": "Imagenes diarias gratuitas",
@@ -763,10 +1372,20 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Graficos para redes", "Merchandising", "Diseno rapido"],
-      "alt": ["canva", "krea", "ms-designer"],
+      "usos": [
+        "Graficos para redes",
+        "Merchandising",
+        "Diseno rapido"
+      ],
+      "alt": [
+        "canva",
+        "krea",
+        "ms-designer"
+      ],
       "score": 7.7,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -777,7 +1396,10 @@
       "empresa": "Adobe",
       "url": "https://adobe.com/products/photoshop.html",
       "desc": "El estandar profesional de edicion, ahora con relleno generativo, expansion de imagen y eliminacion de objetos por texto.",
-      "cat": ["edicion-img", "diseno"],
+      "cat": [
+        "edicion-img",
+        "diseno"
+      ],
       "precio": "pago",
       "desde": 22.99,
       "gratis": null,
@@ -785,11 +1407,25 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["win", "mac", "ios", "web"],
+      "plat": [
+        "win",
+        "mac",
+        "ios",
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Retoque profesional", "Expandir encuadres", "Quitar objetos"],
-      "alt": ["canva", "clipdrop", "krea", "gimp"],
-      "score": 9.0,
+      "usos": [
+        "Retoque profesional",
+        "Expandir encuadres",
+        "Quitar objetos"
+      ],
+      "alt": [
+        "canva",
+        "clipdrop",
+        "krea",
+        "gimp"
+      ],
+      "score": 9,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -799,7 +1435,13 @@
       "empresa": "Canva",
       "url": "https://canva.com",
       "desc": "Diseno grafico para todos con IA integrada: genera imagenes, redacta textos, crea presentaciones y edita video en el mismo lugar.",
-      "cat": ["diseno", "presentaciones", "imagen", "marketing", "video"],
+      "cat": [
+        "diseno",
+        "presentaciones",
+        "imagen",
+        "marketing",
+        "video"
+      ],
       "precio": "freemium",
       "desde": 15,
       "gratis": "Editor completo, plantillas y creditos mensuales de IA",
@@ -807,10 +1449,24 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android", "win", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Presentaciones y redes", "Marca personal", "Equipos sin disenador"],
-      "alt": ["ms-designer", "figma-ai", "gamma"],
+      "usos": [
+        "Presentaciones y redes",
+        "Marca personal",
+        "Equipos sin disenador"
+      ],
+      "alt": [
+        "ms-designer",
+        "figma-ai",
+        "gamma"
+      ],
       "score": 9.1,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -821,7 +1477,9 @@
       "empresa": "Canva",
       "url": "https://remove.bg",
       "desc": "Quita el fondo de cualquier imagen en un segundo. Simple, preciso y con API para automatizar.",
-      "cat": ["edicion-img"],
+      "cat": [
+        "edicion-img"
+      ],
       "precio": "freemium",
       "desde": 9,
       "gratis": "Vista previa en baja resolucion ilimitada, 1 credito HD al mes",
@@ -829,10 +1487,23 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "win", "mac", "api"],
+      "plat": [
+        "web",
+        "win",
+        "mac",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Fotos de producto", "Recortes rapidos", "Automatizar catalogos"],
-      "alt": ["clipdrop", "canva", "photoroom"],
+      "usos": [
+        "Fotos de producto",
+        "Recortes rapidos",
+        "Automatizar catalogos"
+      ],
+      "alt": [
+        "clipdrop",
+        "canva",
+        "photoroom"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -843,7 +1514,10 @@
       "empresa": "PhotoRoom",
       "url": "https://photoroom.com",
       "desc": "Fotografia de producto con IA desde el movil: fondo, sombras, luz y plantillas para vender en marketplaces.",
-      "cat": ["edicion-img", "marketing"],
+      "cat": [
+        "edicion-img",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 9.99,
       "gratis": "Edicion basica con marca de agua o resolucion limitada",
@@ -851,10 +1525,23 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "api"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Fotos de producto para tienda", "Catalogos de ecommerce", "Contenido para redes"],
-      "alt": ["removebg", "clipdrop", "canva"],
+      "usos": [
+        "Fotos de producto para tienda",
+        "Catalogos de ecommerce",
+        "Contenido para redes"
+      ],
+      "alt": [
+        "removebg",
+        "clipdrop",
+        "canva"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -865,7 +1552,9 @@
       "empresa": "Freepik",
       "url": "https://magnific.ai",
       "desc": "Escalador e ilustrador de detalle que reinventa la imagen al ampliarla. Resultados espectaculares para impresion y cine.",
-      "cat": ["edicion-img"],
+      "cat": [
+        "edicion-img"
+      ],
       "precio": "pago",
       "desde": 39,
       "gratis": null,
@@ -873,10 +1562,20 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Ampliar para impresion", "Anadir detalle a renders", "Restaurar fotos"],
-      "alt": ["upscayl", "topaz", "krea"],
+      "usos": [
+        "Ampliar para impresion",
+        "Anadir detalle a renders",
+        "Restaurar fotos"
+      ],
+      "alt": [
+        "upscayl",
+        "topaz",
+        "krea"
+      ],
       "score": 8.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -887,7 +1586,10 @@
       "empresa": "Topaz Labs",
       "url": "https://topazlabs.com",
       "desc": "Suite de escritorio para escalar, enfocar y limpiar ruido en fotos y video. Licencia unica en vez de suscripcion.",
-      "cat": ["edicion-img", "video"],
+      "cat": [
+        "edicion-img",
+        "video"
+      ],
       "precio": "pago",
       "desde": 16,
       "gratis": null,
@@ -895,10 +1597,20 @@
       "oss": false,
       "es": 3,
       "priv": "local",
-      "plat": ["win", "mac"],
+      "plat": [
+        "win",
+        "mac"
+      ],
       "nivel": 2,
-      "usos": ["Restaurar fotos antiguas", "Escalar video antiguo", "Reducir ruido"],
-      "alt": ["upscayl", "magnific"],
+      "usos": [
+        "Restaurar fotos antiguas",
+        "Escalar video antiguo",
+        "Reducir ruido"
+      ],
+      "alt": [
+        "upscayl",
+        "magnific"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -909,7 +1621,10 @@
       "empresa": "Comunidad",
       "url": "https://upscayl.org",
       "desc": "Escalador de imagenes libre y offline. Hace en tu equipo lo que otros cobran por credito.",
-      "cat": ["edicion-img", "local"],
+      "cat": [
+        "edicion-img",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Totalmente libre y sin limites",
@@ -917,10 +1632,21 @@
       "oss": true,
       "es": 4,
       "priv": "local",
-      "plat": ["win", "mac", "linux"],
+      "plat": [
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 1,
-      "usos": ["Ampliar imagenes gratis", "Procesar por lotes", "Trabajo offline"],
-      "alt": ["magnific", "topaz"],
+      "usos": [
+        "Ampliar imagenes gratis",
+        "Procesar por lotes",
+        "Trabajo offline"
+      ],
+      "alt": [
+        "magnific",
+        "topaz"
+      ],
       "score": 8.1,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -931,7 +1657,10 @@
       "empresa": "Jasper",
       "url": "https://clipdrop.co",
       "desc": "Caja de herramientas de imagen: quitar fondo, limpiar objetos, reiluminar, escalar y mas, cada una en un clic.",
-      "cat": ["edicion-img", "imagen"],
+      "cat": [
+        "edicion-img",
+        "imagen"
+      ],
       "precio": "freemium",
       "desde": 9,
       "gratis": "Usos diarios limitados de cada herramienta",
@@ -939,11 +1668,24 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android", "api"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Limpiar fotos", "Reiluminar escenas", "Prototipos visuales"],
-      "alt": ["removebg", "canva", "photoroom"],
-      "score": 8.0,
+      "usos": [
+        "Limpiar fotos",
+        "Reiluminar escenas",
+        "Prototipos visuales"
+      ],
+      "alt": [
+        "removebg",
+        "canva",
+        "photoroom"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -953,7 +1695,10 @@
       "empresa": "Runway",
       "url": "https://runwayml.com",
       "desc": "Estudio de video con IA usado en cine y publicidad: texto a video, video a video, control de camara y edicion avanzada.",
-      "cat": ["video", "edicion-img"],
+      "cat": [
+        "video",
+        "edicion-img"
+      ],
       "precio": "freemium",
       "desde": 15,
       "gratis": "Creditos iniciales de un solo uso para probar",
@@ -961,33 +1706,23 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "ios"],
+      "plat": [
+        "web",
+        "ios"
+      ],
       "nivel": 2,
-      "usos": ["Video publicitario", "Efectos visuales", "Storyboards animados"],
-      "alt": ["kling", "hailuo", "pika", "qwen-chat"],
-      "score": 9.0,
-      "destacado": true,
-      "agregado": "2026-06-01"
-    },
-    {
-      "id": "sora",
-      "nombre": "Sora",
-      "empresa": "OpenAI",
-      "url": "https://sora.com",
-      "desc": "Generador de video de OpenAI con gran coherencia narrativa, audio sincronizado y remezcla de escenas. Incluido en los planes de ChatGPT.",
-      "cat": ["video"],
-      "precio": "pago",
-      "desde": 20,
-      "gratis": "Generaciones limitadas segun region y disponibilidad",
-      "api": true,
-      "oss": false,
-      "es": 5,
-      "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
-      "nivel": 1,
-      "usos": ["Piezas narrativas cortas", "Prototipos audiovisuales", "Contenido social"],
-      "alt": ["veo", "kling", "runway", "hailuo"],
-      "score": 9.1,
+      "usos": [
+        "Video publicitario",
+        "Efectos visuales",
+        "Storyboards animados"
+      ],
+      "alt": [
+        "kling",
+        "hailuo",
+        "pika",
+        "qwen-chat"
+      ],
+      "score": 9,
       "destacado": true,
       "agregado": "2026-06-01"
     },
@@ -997,7 +1732,10 @@
       "empresa": "Google",
       "url": "https://labs.google/flow",
       "desc": "Modelo de video de Google con audio nativo y consistencia de personajes, dentro del editor Flow para montar escenas completas.",
-      "cat": ["video", "audio"],
+      "cat": [
+        "video",
+        "audio"
+      ],
       "precio": "pago",
       "desde": 19.99,
       "gratis": "Creditos mensuales limitados en el plan gratuito de Gemini",
@@ -1005,11 +1743,21 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Cortos con dialogo", "Publicidad", "Continuidad entre planos"],
-      "alt": ["sora", "runway", "kling"],
-      "score": 9.0,
+      "usos": [
+        "Cortos con dialogo",
+        "Publicidad",
+        "Continuidad entre planos"
+      ],
+      "alt": [
+        "hailuo",
+        "runway",
+        "kling"
+      ],
+      "score": 9,
       "destacado": true,
       "agregado": "2026-06-01"
     },
@@ -1019,7 +1767,9 @@
       "empresa": "Kuaishou",
       "url": "https://klingai.com",
       "desc": "Generador de video con movimiento muy realista y buen control de referencias. Plan gratuito diario poco habitual en esta categoria.",
-      "cat": ["video"],
+      "cat": [
+        "video"
+      ],
       "precio": "freemium",
       "desde": 10,
       "gratis": "Creditos diarios renovables para clips cortos",
@@ -1027,10 +1777,23 @@
       "oss": false,
       "es": 3,
       "priv": "entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Video para redes", "Animar fotos", "Pruebas de concepto"],
-      "alt": ["hailuo", "runway", "pika", "qwen-chat"],
+      "usos": [
+        "Video para redes",
+        "Animar fotos",
+        "Pruebas de concepto"
+      ],
+      "alt": [
+        "hailuo",
+        "runway",
+        "pika",
+        "qwen-chat"
+      ],
       "score": 8.8,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -1041,7 +1804,9 @@
       "empresa": "MiniMax",
       "url": "https://hailuoai.video",
       "desc": "Video generativo con excelente relacion calidad/precio y creditos gratuitos diarios. Muy bueno animando imagenes fijas.",
-      "cat": ["video"],
+      "cat": [
+        "video"
+      ],
       "precio": "freemium",
       "desde": 9.99,
       "gratis": "Creditos diarios gratuitos",
@@ -1049,10 +1814,20 @@
       "oss": false,
       "es": 3,
       "priv": "entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Animar ilustraciones", "Contenido para TikTok", "Video barato en volumen"],
-      "alt": ["kling", "pika", "luma-dream"],
+      "usos": [
+        "Animar ilustraciones",
+        "Contenido para TikTok",
+        "Video barato en volumen"
+      ],
+      "alt": [
+        "kling",
+        "pika",
+        "luma-dream"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1063,7 +1838,10 @@
       "empresa": "Pika Labs",
       "url": "https://pika.art",
       "desc": "Video generativo divertido y rapido, con efectos virales tipo derretir, inflar o aplastar objetos.",
-      "cat": ["video", "marketing"],
+      "cat": [
+        "video",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 8,
       "gratis": "Creditos mensuales gratuitos",
@@ -1071,11 +1849,22 @@
       "oss": false,
       "es": 3,
       "priv": "opt-out",
-      "plat": ["web", "ios"],
+      "plat": [
+        "web",
+        "ios"
+      ],
       "nivel": 1,
-      "usos": ["Contenido viral", "Efectos llamativos", "Video social corto"],
-      "alt": ["kling", "hailuo", "luma-dream"],
-      "score": 8.0,
+      "usos": [
+        "Contenido viral",
+        "Efectos llamativos",
+        "Video social corto"
+      ],
+      "alt": [
+        "kling",
+        "hailuo",
+        "luma-dream"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -1085,7 +1874,10 @@
       "empresa": "Luma AI",
       "url": "https://lumalabs.ai/dream-machine",
       "desc": "Generador de video e imagen con enfoque en movimiento de camara cinematografico y coherencia de personajes.",
-      "cat": ["video", "3d"],
+      "cat": [
+        "video",
+        "3d"
+      ],
       "precio": "freemium",
       "desde": 9.99,
       "gratis": "Generaciones mensuales gratuitas con marca de agua",
@@ -1093,10 +1885,21 @@
       "oss": false,
       "es": 3,
       "priv": "opt-out",
-      "plat": ["web", "ios"],
+      "plat": [
+        "web",
+        "ios"
+      ],
       "nivel": 1,
-      "usos": ["Planos cinematograficos", "Animar conceptos", "Previsualizacion"],
-      "alt": ["kling", "runway", "hailuo"],
+      "usos": [
+        "Planos cinematograficos",
+        "Animar conceptos",
+        "Previsualizacion"
+      ],
+      "alt": [
+        "kling",
+        "runway",
+        "hailuo"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1107,7 +1910,11 @@
       "empresa": "Synthesia",
       "url": "https://synthesia.io",
       "desc": "Video corporativo con presentadores virtuales en mas de 140 idiomas. Estandar en formacion interna y comunicacion de empresa.",
-      "cat": ["video", "educacion", "marketing"],
+      "cat": [
+        "video",
+        "educacion",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 29,
       "gratis": "3 minutos de video al mes con avatares basicos",
@@ -1115,10 +1922,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Cursos y onboarding", "Videos multilingues", "Comunicados internos"],
-      "alt": ["heygen", "d-id", "colossyan"],
+      "usos": [
+        "Cursos y onboarding",
+        "Videos multilingues",
+        "Comunicados internos"
+      ],
+      "alt": [
+        "heygen",
+        "d-id",
+        "colossyan"
+      ],
       "score": 8.7,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1129,7 +1946,11 @@
       "empresa": "HeyGen",
       "url": "https://heygen.com",
       "desc": "Avatares realistas y, sobre todo, doblaje con sincronizacion labial que traduce tu video a decenas de idiomas conservando tu voz.",
-      "cat": ["video", "marketing", "audio"],
+      "cat": [
+        "video",
+        "marketing",
+        "audio"
+      ],
       "precio": "freemium",
       "desde": 29,
       "gratis": "3 videos de hasta 3 minutos al mes",
@@ -1137,10 +1958,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Traducir videos a otros idiomas", "Avatar propio para redes", "Video de ventas personalizado"],
-      "alt": ["synthesia", "d-id", "elevenlabs"],
+      "usos": [
+        "Traducir videos a otros idiomas",
+        "Avatar propio para redes",
+        "Video de ventas personalizado"
+      ],
+      "alt": [
+        "synthesia",
+        "d-id",
+        "elevenlabs"
+      ],
       "score": 8.8,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -1151,7 +1982,10 @@
       "empresa": "D-ID",
       "url": "https://d-id.com",
       "desc": "Convierte una foto en un presentador que habla. Util para avatares de atencion al cliente y agentes conversacionales con cara.",
-      "cat": ["video", "marketing"],
+      "cat": [
+        "video",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 5.9,
       "gratis": "Prueba con minutos limitados",
@@ -1159,10 +1993,20 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Avatares de atencion al cliente", "Animar fotos historicas", "Video personalizado a escala"],
-      "alt": ["heygen", "synthesia"],
+      "usos": [
+        "Avatares de atencion al cliente",
+        "Animar fotos historicas",
+        "Video personalizado a escala"
+      ],
+      "alt": [
+        "heygen",
+        "synthesia"
+      ],
       "score": 7.9,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1173,7 +2017,11 @@
       "empresa": "Descript",
       "url": "https://descript.com",
       "desc": "Edita video y podcast como si fuera un documento de texto: borras palabras y desaparecen del video. Incluye clonacion de voz.",
-      "cat": ["video", "audio", "transcripcion"],
+      "cat": [
+        "video",
+        "audio",
+        "transcripcion"
+      ],
       "precio": "freemium",
       "desde": 24,
       "gratis": "1 hora de transcripcion al mes y edicion basica",
@@ -1181,10 +2029,22 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "win", "mac"],
+      "plat": [
+        "web",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Editar podcast", "Quitar muletillas", "Cortes para redes"],
-      "alt": ["capcut", "opus-clip", "riverside"],
+      "usos": [
+        "Editar podcast",
+        "Quitar muletillas",
+        "Cortes para redes"
+      ],
+      "alt": [
+        "capcut",
+        "opus-clip",
+        "riverside"
+      ],
       "score": 8.9,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -1195,7 +2055,10 @@
       "empresa": "ByteDance",
       "url": "https://capcut.com",
       "desc": "Editor de video gratuito con subtitulos automaticos, eliminacion de fondo y plantillas virales. El rey del contenido vertical.",
-      "cat": ["video", "marketing"],
+      "cat": [
+        "video",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 7.99,
       "gratis": "Editor completo con la mayoria de funciones de IA",
@@ -1203,10 +2066,24 @@
       "oss": false,
       "es": 5,
       "priv": "entrena",
-      "plat": ["web", "ios", "android", "win", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Reels y TikToks", "Subtitulos automaticos", "Edicion movil"],
-      "alt": ["descript", "opus-clip", "invideo"],
+      "usos": [
+        "Reels y TikToks",
+        "Subtitulos automaticos",
+        "Edicion movil"
+      ],
+      "alt": [
+        "descript",
+        "opus-clip",
+        "invideo"
+      ],
       "score": 8.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1217,7 +2094,10 @@
       "empresa": "Opus",
       "url": "https://opus.pro",
       "desc": "Convierte un video largo en decenas de clips verticales con subtitulos y puntuacion de viralidad. Ahorra horas de edicion.",
-      "cat": ["video", "marketing"],
+      "cat": [
+        "video",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 15,
       "gratis": "Minutos mensuales gratuitos con marca de agua",
@@ -1225,10 +2105,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Repurposing de webinars", "Clips para redes", "Podcast a video corto"],
-      "alt": ["capcut", "descript", "vizard"],
+      "usos": [
+        "Repurposing de webinars",
+        "Clips para redes",
+        "Podcast a video corto"
+      ],
+      "alt": [
+        "capcut",
+        "descript",
+        "vizard"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1239,7 +2129,10 @@
       "empresa": "InVideo",
       "url": "https://invideo.io",
       "desc": "Escribes una idea y devuelve un video completo con guion, voz en off, metraje de archivo y musica. Ideal para no editores.",
-      "cat": ["video", "marketing"],
+      "cat": [
+        "video",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "10 minutos semanales con marca de agua",
@@ -1247,10 +2140,20 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Video explicativo rapido", "Anuncios", "Contenido de blog a video"],
-      "alt": ["capcut", "pictory", "canva"],
+      "usos": [
+        "Video explicativo rapido",
+        "Anuncios",
+        "Contenido de blog a video"
+      ],
+      "alt": [
+        "capcut",
+        "pictory",
+        "canva"
+      ],
       "score": 7.8,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1260,8 +2163,12 @@
       "nombre": "ElevenLabs",
       "empresa": "ElevenLabs",
       "url": "https://elevenlabs.io",
-      "desc": "La mejor voz sintetica del mercado: clonacion realista, doblaje, efectos de sonido y agentes de voz conversacionales.",
-      "cat": ["audio", "video"],
+      "desc": "La mejor voz sintética del mercado: clonación realista, doblaje, efectos de sonido y agentes conversacionales. Incluye ElevenLabs Music, con licencias comerciales cerradas con Merlin y Kobalt.",
+      "cat": [
+        "audio",
+        "video",
+        "musica"
+      ],
       "precio": "freemium",
       "desde": 5,
       "gratis": "10.000 caracteres al mes con atribucion",
@@ -1269,13 +2176,26 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Voz en off profesional", "Audiolibros", "Doblaje", "Agentes telefonicos"],
-      "alt": ["murf", "playht", "piper"],
+      "usos": [
+        "Voz en off profesional",
+        "Audiolibros",
+        "Doblaje",
+        "Agentes telefonicos"
+      ],
+      "alt": [
+        "murf",
+        "deepgram",
+        "piper"
+      ],
       "score": 9.4,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "murf",
@@ -1283,7 +2203,10 @@
       "empresa": "Murf",
       "url": "https://murf.ai",
       "desc": "Estudio de locucion con mas de 200 voces, control de enfasis y sincronizacion con diapositivas. Muy orientado a empresa.",
-      "cat": ["audio", "presentaciones"],
+      "cat": [
+        "audio",
+        "presentaciones"
+      ],
       "precio": "freemium",
       "desde": 19,
       "gratis": "10 minutos de generacion sin descarga",
@@ -1291,33 +2214,21 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Locucion de cursos", "Videos corporativos", "Podcast sin microfono"],
-      "alt": ["elevenlabs", "playht", "speechify"],
+      "usos": [
+        "Locucion de cursos",
+        "Videos corporativos",
+        "Podcast sin microfono"
+      ],
+      "alt": [
+        "elevenlabs",
+        "deepgram",
+        "speechify"
+      ],
       "score": 8.1,
-      "destacado": false,
-      "agregado": "2026-06-01"
-    },
-    {
-      "id": "playht",
-      "nombre": "PlayAI",
-      "empresa": "PlayAI",
-      "url": "https://play.ai",
-      "desc": "Voces ultrarapidas por API pensadas para agentes de voz en tiempo real y atencion telefonica automatizada.",
-      "cat": ["audio", "agentes"],
-      "precio": "freemium",
-      "desde": 31.2,
-      "gratis": "Creditos de prueba mensuales",
-      "api": true,
-      "oss": false,
-      "es": 4,
-      "priv": "no-entrena",
-      "plat": ["web", "api"],
-      "nivel": 2,
-      "usos": ["Agentes de voz", "Call center automatizado", "Narracion por API"],
-      "alt": ["elevenlabs", "murf"],
-      "score": 7.9,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -1327,7 +2238,11 @@
       "empresa": "Speechify",
       "url": "https://speechify.com",
       "desc": "Convierte cualquier texto, PDF o web en audio para escuchar mientras haces otra cosa. Muy usado por personas con dislexia.",
-      "cat": ["audio", "productividad", "educacion"],
+      "cat": [
+        "audio",
+        "productividad",
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 11.58,
       "gratis": "Voces estandar ilimitadas a velocidad normal",
@@ -1335,11 +2250,25 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "ext", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "ext",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Escuchar articulos y PDFs", "Accesibilidad", "Estudiar en movimiento"],
-      "alt": ["elevenlabs", "adobe-podcast", "naturalreader"],
-      "score": 8.0,
+      "usos": [
+        "Escuchar articulos y PDFs",
+        "Accesibilidad",
+        "Estudiar en movimiento"
+      ],
+      "alt": [
+        "elevenlabs",
+        "adobe-podcast",
+        "naturalreader"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -1349,7 +2278,9 @@
       "empresa": "Adobe",
       "url": "https://podcast.adobe.com",
       "desc": "Sube un audio grabado con cualquier microfono y suena como estudio profesional. Gratis y sorprendentemente bueno.",
-      "cat": ["audio"],
+      "cat": [
+        "audio"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Mejora de audio sin costo con limites de duracion diarios",
@@ -1357,10 +2288,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Limpiar entrevistas", "Podcast casero", "Audio de reuniones"],
-      "alt": ["lalal", "descript", "auphonic"],
+      "usos": [
+        "Limpiar entrevistas",
+        "Podcast casero",
+        "Audio de reuniones"
+      ],
+      "alt": [
+        "lalal",
+        "descript",
+        "auphonic"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1371,7 +2312,10 @@
       "empresa": "LALAL.AI",
       "url": "https://lalal.ai",
       "desc": "Separa voz, bateria, bajo y otros instrumentos de cualquier cancion con calidad profesional. Tambien limpia ruido de voz.",
-      "cat": ["audio", "musica"],
+      "cat": [
+        "audio",
+        "musica"
+      ],
       "precio": "freemium",
       "desde": 18,
       "gratis": "10 minutos de procesamiento de prueba",
@@ -1379,10 +2323,21 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "win", "mac"],
+      "plat": [
+        "web",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Karaoke y pistas", "Remezclas", "Rescatar audio con ruido"],
-      "alt": ["moises", "adobe-podcast"],
+      "usos": [
+        "Karaoke y pistas",
+        "Remezclas",
+        "Rescatar audio con ruido"
+      ],
+      "alt": [
+        "moises",
+        "adobe-podcast"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1393,7 +2348,11 @@
       "empresa": "Music AI",
       "url": "https://moises.ai",
       "desc": "App para musicos: separa pistas, cambia el tono, detecta acordes y crea versiones de estudio para ensayar.",
-      "cat": ["musica", "audio", "educacion"],
+      "cat": [
+        "musica",
+        "audio",
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 3.99,
       "gratis": "Separaciones mensuales limitadas",
@@ -1401,10 +2360,21 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Ensayar canciones", "Sacar acordes", "Crear pistas de acompanamiento"],
-      "alt": ["lalal", "suno"],
+      "usos": [
+        "Ensayar canciones",
+        "Sacar acordes",
+        "Crear pistas de acompanamiento"
+      ],
+      "alt": [
+        "lalal",
+        "suno"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1414,44 +2384,71 @@
       "nombre": "Suno",
       "empresa": "Suno",
       "url": "https://suno.com",
-      "desc": "Escribe una idea y obtienes una cancion completa con voz, letra e instrumentacion. El generador musical mas popular.",
-      "cat": ["musica"],
+      "desc": "Genera canciones completas con voz, letra e instrumentación. Desde 2026 usa modelos con licencia (Warner, BMG) y limita las descargas mensuales según el plan.",
+      "cat": [
+        "musica"
+      ],
       "precio": "freemium",
       "desde": 10,
-      "gratis": "Creditos diarios para canciones sin uso comercial",
+      "gratis": "Generación gratuita, pero el plan gratis ya no permite descargar los temas",
       "api": true,
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Musica para videos", "Jingles publicitarios", "Canciones personalizadas"],
-      "alt": ["udio", "mubert", "stable-audio"],
-      "score": 8.9,
+      "usos": [
+        "Musica para videos",
+        "Jingles publicitarios",
+        "Canciones personalizadas"
+      ],
+      "alt": [
+        "udio",
+        "mubert",
+        "stable-audio"
+      ],
+      "score": 8.3,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "udio",
       "nombre": "Udio",
       "empresa": "Udio",
       "url": "https://udio.com",
-      "desc": "Generador musical con mucho control sobre estructura, estilo y extension de pistas. Preferido por perfiles mas musicales.",
-      "cat": ["musica"],
+      "desc": "Tras el acuerdo con Universal se convirtió en una plataforma cerrada: sigue generando música, pero ya no puedes descargar ni publicar lo que creas fuera de Udio.",
+      "cat": [
+        "musica"
+      ],
       "precio": "freemium",
       "desde": 10,
-      "gratis": "Creditos mensuales gratuitos",
+      "gratis": "Generación gratuita, pero sin descarga ni uso fuera de la plataforma",
       "api": false,
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Composicion detallada", "Extender pistas", "Explorar generos"],
-      "alt": ["suno", "stable-audio"],
-      "score": 8.4,
+      "usos": [
+        "Escuchar y compartir dentro de Udio",
+        "Explorar géneros",
+        "Composición experimental"
+      ],
+      "alt": [
+        "suno",
+        "stable-audio"
+      ],
+      "score": 6.2,
       "destacado": false,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "mubert",
@@ -1459,7 +2456,10 @@
       "empresa": "Mubert",
       "url": "https://mubert.com",
       "desc": "Musica de fondo libre de derechos generada a demanda, con licencia clara para videos y streaming.",
-      "cat": ["musica", "marketing"],
+      "cat": [
+        "musica",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 11.69,
       "gratis": "Descargas limitadas con atribucion",
@@ -1467,10 +2467,20 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Musica de fondo sin copyright", "Ambientes para apps", "Streaming"],
-      "alt": ["suno", "stable-audio"],
+      "usos": [
+        "Musica de fondo sin copyright",
+        "Ambientes para apps",
+        "Streaming"
+      ],
+      "alt": [
+        "suno",
+        "stable-audio"
+      ],
       "score": 7.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1481,7 +2491,11 @@
       "empresa": "OpenAI",
       "url": "https://github.com/openai/whisper",
       "desc": "Modelo de transcripcion abierto que puedes ejecutar gratis en tu equipo. Base de casi todas las apps de subtitulos.",
-      "cat": ["transcripcion", "local", "audio"],
+      "cat": [
+        "transcripcion",
+        "local",
+        "audio"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Modelo libre, uso ilimitado en tu hardware",
@@ -1489,10 +2503,24 @@
       "oss": true,
       "es": 5,
       "priv": "local",
-      "plat": ["win", "mac", "linux", "cli", "api"],
+      "plat": [
+        "win",
+        "mac",
+        "linux",
+        "cli",
+        "api"
+      ],
       "nivel": 3,
-      "usos": ["Transcribir sin costo", "Subtitulos en lote", "Audio confidencial"],
-      "alt": ["turboscribe", "assemblyai", "notta"],
+      "usos": [
+        "Transcribir sin costo",
+        "Subtitulos en lote",
+        "Audio confidencial"
+      ],
+      "alt": [
+        "turboscribe",
+        "assemblyai",
+        "notta"
+      ],
       "score": 8.8,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1503,7 +2531,10 @@
       "empresa": "AssemblyAI",
       "url": "https://assemblyai.com",
       "desc": "API de transcripcion y comprension de audio para desarrolladores: diarizacion, resumenes, deteccion de temas y sentimiento.",
-      "cat": ["transcripcion", "datos"],
+      "cat": [
+        "transcripcion",
+        "datos"
+      ],
       "precio": "freemium",
       "desde": 0,
       "gratis": "Creditos iniciales y precio por hora despues",
@@ -1511,10 +2542,19 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["api"],
+      "plat": [
+        "api"
+      ],
       "nivel": 3,
-      "usos": ["Integrar transcripcion en un producto", "Analitica de llamadas", "Moderacion de audio"],
-      "alt": ["whisper", "deepgram"],
+      "usos": [
+        "Integrar transcripcion en un producto",
+        "Analitica de llamadas",
+        "Moderacion de audio"
+      ],
+      "alt": [
+        "whisper",
+        "deepgram"
+      ],
       "score": 8.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1525,7 +2565,9 @@
       "empresa": "TurboScribe",
       "url": "https://turboscribe.ai",
       "desc": "Transcripcion rapida y precisa de audio y video a texto, SRT o DOCX. Plan gratuito util de verdad.",
-      "cat": ["transcripcion"],
+      "cat": [
+        "transcripcion"
+      ],
       "precio": "freemium",
       "desde": 10,
       "gratis": "3 transcripciones diarias de hasta 30 minutos",
@@ -1533,10 +2575,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Transcribir entrevistas", "Subtitulos SRT", "Actas de reunion"],
-      "alt": ["notta", "whisper", "otter"],
+      "usos": [
+        "Transcribir entrevistas",
+        "Subtitulos SRT",
+        "Actas de reunion"
+      ],
+      "alt": [
+        "notta",
+        "whisper",
+        "otter"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1547,7 +2599,10 @@
       "empresa": "Otter",
       "url": "https://otter.ai",
       "desc": "Asistente de reuniones que se une a tus videollamadas, transcribe en vivo y genera resumen con tareas asignadas.",
-      "cat": ["transcripcion", "productividad"],
+      "cat": [
+        "transcripcion",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 16.99,
       "gratis": "300 minutos al mes, 30 minutos por reunion",
@@ -1555,10 +2610,23 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "ext"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Actas automaticas", "Seguimiento de acuerdos", "Notas de clase"],
-      "alt": ["fireflies", "tldv", "notta"],
+      "usos": [
+        "Actas automaticas",
+        "Seguimiento de acuerdos",
+        "Notas de clase"
+      ],
+      "alt": [
+        "fireflies",
+        "tldv",
+        "notta"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1569,7 +2637,11 @@
       "empresa": "Fireflies",
       "url": "https://fireflies.ai",
       "desc": "Graba, transcribe y analiza reuniones, y las conecta con tu CRM. Fuerte en equipos comerciales.",
-      "cat": ["transcripcion", "productividad", "marketing"],
+      "cat": [
+        "transcripcion",
+        "productividad",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 10,
       "gratis": "Transcripciones ilimitadas con almacenamiento limitado",
@@ -1577,10 +2649,23 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "ext"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Inteligencia de conversaciones", "Sincronizar con CRM", "Buscar en reuniones pasadas"],
-      "alt": ["otter", "tldv", "fathom"],
+      "usos": [
+        "Inteligencia de conversaciones",
+        "Sincronizar con CRM",
+        "Buscar en reuniones pasadas"
+      ],
+      "alt": [
+        "otter",
+        "tldv",
+        "fathom"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1591,7 +2676,10 @@
       "empresa": "tldv",
       "url": "https://tldv.io",
       "desc": "Graba y resume reuniones de Zoom, Meet y Teams con marcadores y clips compartibles. Plan gratuito muy generoso.",
-      "cat": ["transcripcion", "productividad"],
+      "cat": [
+        "transcripcion",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 18,
       "gratis": "Grabaciones y transcripciones ilimitadas",
@@ -1599,10 +2687,23 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ext", "win", "mac"],
+      "plat": [
+        "web",
+        "ext",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Compartir momentos de reunion", "Onboarding de equipo", "Notas de venta"],
-      "alt": ["otter", "fireflies", "fathom"],
+      "usos": [
+        "Compartir momentos de reunion",
+        "Onboarding de equipo",
+        "Notas de venta"
+      ],
+      "alt": [
+        "otter",
+        "fireflies",
+        "fathom"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1613,7 +2714,10 @@
       "empresa": "Notta",
       "url": "https://notta.ai",
       "desc": "Transcripcion y traduccion de reuniones en tiempo real en mas de 50 idiomas. Buena opcion para equipos multilingues.",
-      "cat": ["transcripcion", "productividad"],
+      "cat": [
+        "transcripcion",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 8.17,
       "gratis": "120 minutos mensuales",
@@ -1621,11 +2725,24 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "ext"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Reuniones en varios idiomas", "Subtitulos en vivo", "Entrevistas"],
-      "alt": ["otter", "turboscribe", "tldv"],
-      "score": 8.0,
+      "usos": [
+        "Reuniones en varios idiomas",
+        "Subtitulos en vivo",
+        "Entrevistas"
+      ],
+      "alt": [
+        "otter",
+        "turboscribe",
+        "tldv"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -1634,44 +2751,78 @@
       "nombre": "GitHub Copilot",
       "empresa": "GitHub / Microsoft",
       "url": "https://github.com/features/copilot",
-      "desc": "Autocompletado y chat de codigo dentro de tu editor, con modo agente. El asistente de programacion mas extendido.",
-      "cat": ["codigo"],
+      "desc": "Autocompletado y chat de código dentro de tu editor, con modo agente. Desde jun-2026 mide el uso avanzado con créditos de IA en vez de peticiones.",
+      "cat": [
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 10,
-      "gratis": "2.000 completados y 50 mensajes de chat al mes; gratis para estudiantes y OSS",
+      "gratis": "2.000 completados y 50 mensajes de chat al mes; gratis para estudiantes y proyectos de código abierto",
       "api": false,
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["win", "mac", "linux", "web", "ext"],
+      "plat": [
+        "win",
+        "mac",
+        "linux",
+        "web",
+        "ext"
+      ],
       "nivel": 2,
-      "usos": ["Autocompletar codigo", "Explicar codigo ajeno", "Escribir pruebas"],
-      "alt": ["continue", "codeium", "cursor", "cline"],
-      "score": 9.0,
+      "usos": [
+        "Autocompletar codigo",
+        "Explicar codigo ajeno",
+        "Escribir pruebas"
+      ],
+      "alt": [
+        "continue",
+        "windsurf",
+        "cursor",
+        "cline"
+      ],
+      "score": 9,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "cursor",
       "nombre": "Cursor",
       "empresa": "Anysphere",
       "url": "https://cursor.com",
-      "desc": "Editor de codigo construido sobre VS Code con IA en el centro: edita varios archivos, entiende el repo y ejecuta cambios completos.",
-      "cat": ["codigo"],
+      "desc": "Editor construido sobre VS Code con la IA en el centro: edita varios archivos, entiende el repositorio y ejecuta cambios completos. Sobre el plan Pro hay Pro+ (60 $) y Ultra (200 $).",
+      "cat": [
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 20,
-      "gratis": "Prueba de dos semanas y uso limitado despues",
+      "gratis": "Plan Hobby gratuito permanente, con cuota mensual limitada",
       "api": false,
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["win", "mac", "linux"],
+      "plat": [
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 2,
-      "usos": ["Refactorizar proyectos", "Programar mas rapido", "Entender codigo heredado"],
-      "alt": ["windsurf", "cline", "continue", "github-copilot"],
+      "usos": [
+        "Refactorizar proyectos",
+        "Programar mas rapido",
+        "Entender codigo heredado"
+      ],
+      "alt": [
+        "windsurf",
+        "cline",
+        "continue",
+        "github-copilot"
+      ],
       "score": 9.3,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "claude-code",
@@ -1679,7 +2830,10 @@
       "empresa": "Anthropic",
       "url": "https://claude.com/claude-code",
       "desc": "Agente de programacion en terminal, escritorio, web e IDE que lee tu repositorio, edita archivos y ejecuta comandos por ti.",
-      "cat": ["codigo", "agentes"],
+      "cat": [
+        "codigo",
+        "agentes"
+      ],
       "precio": "pago",
       "desde": 20,
       "gratis": null,
@@ -1687,35 +2841,68 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["cli", "win", "mac", "linux", "web", "ext"],
+      "plat": [
+        "cli",
+        "win",
+        "mac",
+        "linux",
+        "web",
+        "ext"
+      ],
       "nivel": 3,
-      "usos": ["Tareas largas de refactor", "Automatizar mantenimiento", "Migraciones de codigo"],
-      "alt": ["aider", "cline", "cursor", "opencode"],
+      "usos": [
+        "Tareas largas de refactor",
+        "Automatizar mantenimiento",
+        "Migraciones de codigo"
+      ],
+      "alt": [
+        "aider",
+        "cline",
+        "cursor",
+        "opencode"
+      ],
       "score": 9.4,
       "destacado": true,
       "agregado": "2026-06-01"
     },
     {
       "id": "windsurf",
-      "nombre": "Windsurf",
+      "nombre": "Devin Desktop",
       "empresa": "Cognition",
-      "url": "https://windsurf.com",
-      "desc": "Editor con agente que mantiene el contexto de todo el proyecto y aplica cambios coordinados sin que tengas que guiarlo paso a paso.",
-      "cat": ["codigo"],
+      "url": "https://devin.ai",
+      "desc": "El antiguo editor Windsurf, renombrado Devin Desktop en jun-2026. Agente que mantiene el contexto del proyecto y ejecuta cambios coordinados por su cuenta.",
+      "cat": [
+        "codigo"
+      ],
       "precio": "freemium",
-      "desde": 15,
-      "gratis": "Creditos mensuales gratuitos y autocompletado ilimitado",
+      "desde": 20,
+      "gratis": "Plan gratuito con cuota diaria y semanal reducida",
       "api": false,
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["win", "mac", "linux", "ext"],
+      "plat": [
+        "win",
+        "mac",
+        "linux",
+        "ext"
+      ],
       "nivel": 2,
-      "usos": ["Desarrollo asistido por agente", "Proyectos medianos", "Alternativa mas barata a Cursor"],
-      "alt": ["cursor", "cline", "codeium"],
-      "score": 8.7,
+      "usos": [
+        "Desarrollo asistido por agente",
+        "Tareas largas de código",
+        "Alternativa a Cursor"
+      ],
+      "alt": [
+        "cursor",
+        "cline",
+        "github-copilot",
+        "antigravity"
+      ],
+      "score": 8.5,
       "destacado": false,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "cline",
@@ -1723,7 +2910,11 @@
       "empresa": "Cline",
       "url": "https://cline.bot",
       "desc": "Agente de codigo de codigo abierto para VS Code. Tu pones la clave de API o un modelo local y no pagas suscripcion.",
-      "cat": ["codigo", "agentes", "local"],
+      "cat": [
+        "codigo",
+        "agentes",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Extension libre; solo pagas el consumo del modelo que elijas",
@@ -1731,10 +2922,24 @@
       "oss": true,
       "es": 4,
       "priv": "local",
-      "plat": ["ext", "win", "mac", "linux"],
+      "plat": [
+        "ext",
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 3,
-      "usos": ["Agente de codigo sin suscripcion", "Usar modelos locales para programar", "Control total del contexto"],
-      "alt": ["continue", "aider", "cursor", "claude-code"],
+      "usos": [
+        "Agente de codigo sin suscripcion",
+        "Usar modelos locales para programar",
+        "Control total del contexto"
+      ],
+      "alt": [
+        "continue",
+        "aider",
+        "cursor",
+        "claude-code"
+      ],
       "score": 8.8,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -1745,7 +2950,10 @@
       "empresa": "Continue",
       "url": "https://continue.dev",
       "desc": "Copiloto de codigo libre para VS Code y JetBrains que funciona con cualquier modelo, incluidos los locales de Ollama.",
-      "cat": ["codigo", "local"],
+      "cat": [
+        "codigo",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Extension libre y gratuita",
@@ -1753,10 +2961,23 @@
       "oss": true,
       "es": 4,
       "priv": "local",
-      "plat": ["ext", "win", "mac", "linux"],
+      "plat": [
+        "ext",
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 2,
-      "usos": ["Copiloto gratis", "Codigo confidencial en local", "Personalizar el asistente"],
-      "alt": ["cline", "codeium", "github-copilot"],
+      "usos": [
+        "Copiloto gratis",
+        "Codigo confidencial en local",
+        "Personalizar el asistente"
+      ],
+      "alt": [
+        "cline",
+        "windsurf",
+        "github-copilot"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1767,7 +2988,10 @@
       "empresa": "Comunidad",
       "url": "https://aider.chat",
       "desc": "Programacion en pareja desde la terminal con integracion directa en Git: cada cambio queda como commit revisable.",
-      "cat": ["codigo", "agentes"],
+      "cat": [
+        "codigo",
+        "agentes"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Herramienta libre; pagas solo el modelo que uses",
@@ -1775,33 +2999,24 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["cli", "win", "mac", "linux"],
+      "plat": [
+        "cli",
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 3,
-      "usos": ["Cambios con historial limpio", "Trabajo en servidores remotos", "Automatizacion por scripts"],
-      "alt": ["claude-code", "cline", "opencode"],
+      "usos": [
+        "Cambios con historial limpio",
+        "Trabajo en servidores remotos",
+        "Automatizacion por scripts"
+      ],
+      "alt": [
+        "claude-code",
+        "cline",
+        "opencode"
+      ],
       "score": 8.5,
-      "destacado": false,
-      "agregado": "2026-06-01"
-    },
-    {
-      "id": "codeium",
-      "nombre": "Codeium",
-      "empresa": "Cognition",
-      "url": "https://codeium.com",
-      "desc": "Autocompletado de codigo gratuito e ilimitado para uso individual, compatible con mas de 40 editores.",
-      "cat": ["codigo"],
-      "precio": "freemium",
-      "desde": 15,
-      "gratis": "Autocompletado y chat ilimitados para uso personal",
-      "api": false,
-      "oss": false,
-      "es": 4,
-      "priv": "no-entrena",
-      "plat": ["ext", "win", "mac", "linux"],
-      "nivel": 2,
-      "usos": ["Copiloto gratis para estudiantes", "Autocompletar en cualquier editor", "Equipos con presupuesto ajustado"],
-      "alt": ["github-copilot", "continue", "tabnine"],
-      "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -1811,7 +3026,10 @@
       "empresa": "Tabnine",
       "url": "https://tabnine.com",
       "desc": "Asistente de codigo con despliegue privado o local, pensado para empresas con requisitos estrictos de propiedad intelectual.",
-      "cat": ["codigo", "local"],
+      "cat": [
+        "codigo",
+        "local"
+      ],
       "precio": "freemium",
       "desde": 9,
       "gratis": "Autocompletado basico",
@@ -1819,10 +3037,23 @@
       "oss": false,
       "es": 4,
       "priv": "local",
-      "plat": ["ext", "win", "mac", "linux"],
+      "plat": [
+        "ext",
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 2,
-      "usos": ["Codigo que no puede salir de la empresa", "Cumplimiento normativo", "Modelo entrenado con tu repo"],
-      "alt": ["continue", "codeium", "github-copilot"],
+      "usos": [
+        "Codigo que no puede salir de la empresa",
+        "Cumplimiento normativo",
+        "Modelo entrenado con tu repo"
+      ],
+      "alt": [
+        "continue",
+        "windsurf",
+        "github-copilot"
+      ],
       "score": 7.9,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1833,7 +3064,10 @@
       "empresa": "StackBlitz",
       "url": "https://bolt.new",
       "desc": "Describes una aplicacion web y la construye completa en el navegador, con despliegue en un clic. Sin instalar nada.",
-      "cat": ["no-code", "codigo"],
+      "cat": [
+        "no-code",
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "Tokens diarios gratuitos",
@@ -1841,10 +3075,20 @@
       "oss": true,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Prototipos web", "MVPs", "Landing pages funcionales"],
-      "alt": ["lovable", "v0", "replit"],
+      "usos": [
+        "Prototipos web",
+        "MVPs",
+        "Landing pages funcionales"
+      ],
+      "alt": [
+        "lovable",
+        "v0",
+        "replit"
+      ],
       "score": 8.6,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -1855,7 +3099,10 @@
       "empresa": "Lovable",
       "url": "https://lovable.dev",
       "desc": "Crea aplicaciones completas con base de datos y autenticacion conversando. El referente europeo de vibe coding.",
-      "cat": ["no-code", "codigo"],
+      "cat": [
+        "no-code",
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 25,
       "gratis": "5 mensajes diarios y proyectos publicos",
@@ -1863,10 +3110,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Apps con login y base de datos", "Producto minimo viable", "Herramientas internas"],
-      "alt": ["bolt", "replit", "v0"],
+      "usos": [
+        "Apps con login y base de datos",
+        "Producto minimo viable",
+        "Herramientas internas"
+      ],
+      "alt": [
+        "bolt",
+        "replit",
+        "v0"
+      ],
       "score": 8.7,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -1877,7 +3134,11 @@
       "empresa": "Vercel",
       "url": "https://v0.app",
       "desc": "Genera interfaces React y Tailwind de calidad de produccion a partir de una descripcion o una captura de pantalla.",
-      "cat": ["no-code", "diseno", "codigo"],
+      "cat": [
+        "no-code",
+        "diseno",
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "Creditos mensuales gratuitos",
@@ -1885,10 +3146,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Componentes de UI listos", "De diseno a codigo", "Prototipos frontend"],
-      "alt": ["bolt", "lovable", "figma-ai"],
+      "usos": [
+        "Componentes de UI listos",
+        "De diseno a codigo",
+        "Prototipos frontend"
+      ],
+      "alt": [
+        "bolt",
+        "lovable",
+        "figma-ai"
+      ],
       "score": 8.8,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1899,7 +3170,10 @@
       "empresa": "Replit",
       "url": "https://replit.com",
       "desc": "Entorno de desarrollo en la nube con agente que crea, prueba y despliega la app entera sin configurar nada en tu equipo.",
-      "cat": ["no-code", "codigo"],
+      "cat": [
+        "no-code",
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 25,
       "gratis": "Entorno de desarrollo gratuito con uso de agente limitado",
@@ -1907,10 +3181,22 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Aprender a programar", "Desplegar sin DevOps", "Proyectos escolares"],
-      "alt": ["bolt", "lovable", "cursor"],
+      "usos": [
+        "Aprender a programar",
+        "Desplegar sin DevOps",
+        "Proyectos escolares"
+      ],
+      "alt": [
+        "bolt",
+        "lovable",
+        "cursor"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -1921,7 +3207,11 @@
       "empresa": "Comunidad",
       "url": "https://opencode.ai",
       "desc": "Agente de programacion en terminal, libre y agnostico de proveedor. Alternativa abierta a los agentes de codigo comerciales.",
-      "cat": ["codigo", "agentes", "local"],
+      "cat": [
+        "codigo",
+        "agentes",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Libre y gratuito; pagas solo el modelo",
@@ -1929,10 +3219,23 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["cli", "win", "mac", "linux"],
+      "plat": [
+        "cli",
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 3,
-      "usos": ["Agente de codigo sin ataduras", "Usar cualquier modelo", "Trabajo en servidor"],
-      "alt": ["aider", "cline", "claude-code"],
+      "usos": [
+        "Agente de codigo sin ataduras",
+        "Usar cualquier modelo",
+        "Trabajo en servidor"
+      ],
+      "alt": [
+        "aider",
+        "cline",
+        "claude-code"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-07-15"
@@ -1943,7 +3246,10 @@
       "empresa": "Comunidad",
       "url": "https://gimp.org",
       "desc": "Editor de imagen libre y gratuito. Con complementos de IA cubre buena parte de lo que hace Photoshop sin coste.",
-      "cat": ["edicion-img", "local"],
+      "cat": [
+        "edicion-img",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Totalmente libre",
@@ -1951,35 +3257,65 @@
       "oss": true,
       "es": 5,
       "priv": "local",
-      "plat": ["win", "mac", "linux"],
+      "plat": [
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 2,
-      "usos": ["Edicion sin suscripcion", "Retoque offline", "Alternativa libre a Photoshop"],
-      "alt": ["photoshop-ai", "canva", "upscayl"],
+      "usos": [
+        "Edicion sin suscripcion",
+        "Retoque offline",
+        "Alternativa libre a Photoshop"
+      ],
+      "alt": [
+        "photoshop-ai",
+        "canva",
+        "upscayl"
+      ],
       "score": 7.5,
       "destacado": false,
       "agregado": "2026-06-01"
     },
     {
       "id": "notebooklm",
-      "nombre": "NotebookLM",
+      "nombre": "Gemini Notebook",
       "empresa": "Google",
       "url": "https://notebooklm.google.com",
-      "desc": "Sube tus documentos y responde solo con ellos, con citas exactas. Genera resumenes, mapas mentales y un podcast de dos voces.",
-      "cat": ["investigacion", "educacion", "productividad", "audio"],
+      "desc": "Antes NotebookLM, renombrado en jul-2026. Responde solo con los documentos que le subes, citando la fuente exacta, y convierte tus lecturas en un pódcast de dos voces.",
+      "cat": [
+        "investigacion",
+        "educacion",
+        "productividad",
+        "audio"
+      ],
       "precio": "freemium",
       "desde": 19.99,
-      "gratis": "Hasta 100 cuadernos con 50 fuentes cada uno y audio diario limitado",
+      "gratis": "Uso completo con una cuenta de Google; los límites altos llegan con los planes Google AI",
       "api": false,
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Estudiar apuntes", "Resumir informes con citas", "Convertir lecturas en podcast"],
-      "alt": ["anythingllm", "scispace", "claude"],
+      "usos": [
+        "Estudiar apuntes",
+        "Resumir informes con citas",
+        "Convertir lecturas en podcast"
+      ],
+      "alt": [
+        "anythingllm",
+        "scispace",
+        "claude"
+      ],
       "score": 9.3,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "elicit",
@@ -1987,7 +3323,9 @@
       "empresa": "Elicit",
       "url": "https://elicit.com",
       "desc": "Revision sistematica de literatura cientifica: busca papers, extrae datos en tabla y resume hallazgos de decenas de estudios.",
-      "cat": ["investigacion"],
+      "cat": [
+        "investigacion"
+      ],
       "precio": "freemium",
       "desde": 12,
       "gratis": "Busquedas ilimitadas y extracciones mensuales limitadas",
@@ -1995,10 +3333,20 @@
       "oss": false,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Revision sistematica", "Extraer datos de papers", "Estado del arte"],
-      "alt": ["consensus", "scispace", "semantic-scholar"],
+      "usos": [
+        "Revision sistematica",
+        "Extraer datos de papers",
+        "Estado del arte"
+      ],
+      "alt": [
+        "consensus",
+        "scispace",
+        "semantic-scholar"
+      ],
       "score": 8.7,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2009,7 +3357,10 @@
       "empresa": "Consensus",
       "url": "https://consensus.app",
       "desc": "Buscador que responde preguntas cientificas con el consenso de la evidencia publicada y un medidor de acuerdo entre estudios.",
-      "cat": ["investigacion", "busqueda"],
+      "cat": [
+        "investigacion",
+        "busqueda"
+      ],
       "precio": "freemium",
       "desde": 8.99,
       "gratis": "Busquedas ilimitadas y creditos mensuales de funciones IA",
@@ -2017,10 +3368,21 @@
       "oss": false,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web", "ios"],
+      "plat": [
+        "web",
+        "ios"
+      ],
       "nivel": 1,
-      "usos": ["Verificar afirmaciones de salud", "Fundamentar argumentos", "Docencia"],
-      "alt": ["elicit", "perplexity", "semantic-scholar"],
+      "usos": [
+        "Verificar afirmaciones de salud",
+        "Fundamentar argumentos",
+        "Docencia"
+      ],
+      "alt": [
+        "elicit",
+        "perplexity",
+        "semantic-scholar"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2031,7 +3393,10 @@
       "empresa": "SciSpace",
       "url": "https://typeset.io",
       "desc": "Copiloto de lectura academica: explica parrafos difficiles, formulas y tablas de un paper mientras lo lees.",
-      "cat": ["investigacion", "educacion"],
+      "cat": [
+        "investigacion",
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 12,
       "gratis": "Mensajes y subidas mensuales limitadas",
@@ -2039,10 +3404,21 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "ext"],
+      "plat": [
+        "web",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Entender papers", "Traducir jerga tecnica", "Tesis y TFM"],
-      "alt": ["notebooklm", "elicit", "claude"],
+      "usos": [
+        "Entender papers",
+        "Traducir jerga tecnica",
+        "Tesis y TFM"
+      ],
+      "alt": [
+        "notebooklm",
+        "elicit",
+        "claude"
+      ],
       "score": 8.1,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2053,7 +3429,10 @@
       "empresa": "Allen Institute for AI",
       "url": "https://semanticscholar.org",
       "desc": "Buscador academico gratuito con resumenes generados, citas influyentes y API abierta. Sin animo de lucro.",
-      "cat": ["investigacion", "busqueda"],
+      "cat": [
+        "investigacion",
+        "busqueda"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Acceso completo y API publica sin costo",
@@ -2061,10 +3440,21 @@
       "oss": true,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Buscar papers gratis", "Seguir citas", "Alimentar proyectos de datos"],
-      "alt": ["connected-papers", "consensus", "research-rabbit"],
+      "usos": [
+        "Buscar papers gratis",
+        "Seguir citas",
+        "Alimentar proyectos de datos"
+      ],
+      "alt": [
+        "connected-papers",
+        "consensus",
+        "research-rabbit"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2075,7 +3465,9 @@
       "empresa": "Connected Papers",
       "url": "https://connectedpapers.com",
       "desc": "Dibuja el grafo de papers relacionados con uno de partida. Ideal para entender un campo nuevo de un vistazo.",
-      "cat": ["investigacion"],
+      "cat": [
+        "investigacion"
+      ],
       "precio": "freemium",
       "desde": 3,
       "gratis": "5 grafos gratuitos al mes",
@@ -2083,11 +3475,21 @@
       "oss": false,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Mapear un campo", "Encontrar articulos seminales", "Marco teorico"],
-      "alt": ["research-rabbit", "semantic-scholar", "elicit"],
-      "score": 8.0,
+      "usos": [
+        "Mapear un campo",
+        "Encontrar articulos seminales",
+        "Marco teorico"
+      ],
+      "alt": [
+        "research-rabbit",
+        "semantic-scholar",
+        "elicit"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -2097,7 +3499,9 @@
       "empresa": "ResearchRabbit",
       "url": "https://researchrabbit.ai",
       "desc": "Spotify de los papers: creas colecciones y te recomienda literatura relacionada de forma continua. Gratis de por vida.",
-      "cat": ["investigacion"],
+      "cat": [
+        "investigacion"
+      ],
       "precio": "gratis",
       "desde": 0,
       "gratis": "Todas las funciones sin costo",
@@ -2105,10 +3509,20 @@
       "oss": false,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Descubrir literatura", "Seguir un tema", "Colaborar en bibliografia"],
-      "alt": ["connected-papers", "semantic-scholar", "elicit"],
+      "usos": [
+        "Descubrir literatura",
+        "Seguir un tema",
+        "Colaborar en bibliografia"
+      ],
+      "alt": [
+        "connected-papers",
+        "semantic-scholar",
+        "elicit"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2119,7 +3533,11 @@
       "empresa": "Gamma",
       "url": "https://gamma.app",
       "desc": "Genera presentaciones, documentos y webs con buen diseno a partir de un texto o un archivo. El mejor de su categoria.",
-      "cat": ["presentaciones", "diseno", "marketing"],
+      "cat": [
+        "presentaciones",
+        "diseno",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 10,
       "gratis": "400 creditos iniciales y presentaciones ilimitadas con marca",
@@ -2127,34 +3545,24 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Presentaciones en minutos", "Propuestas comerciales", "Informes visuales"],
-      "alt": ["tome", "canva", "beautifulai"],
-      "score": 9.0,
+      "usos": [
+        "Presentaciones en minutos",
+        "Propuestas comerciales",
+        "Informes visuales"
+      ],
+      "alt": [
+        "figma-ai",
+        "canva",
+        "beautifulai"
+      ],
+      "score": 9,
       "destacado": true,
-      "agregado": "2026-06-01"
-    },
-    {
-      "id": "tome",
-      "nombre": "Tome",
-      "empresa": "Tome",
-      "url": "https://tome.app",
-      "desc": "Presentaciones narrativas generadas con IA, enfocadas en ventas y storytelling de producto.",
-      "cat": ["presentaciones", "marketing"],
-      "precio": "freemium",
-      "desde": 20,
-      "gratis": "Creditos mensuales limitados",
-      "api": false,
-      "oss": false,
-      "es": 4,
-      "priv": "opt-out",
-      "plat": ["web", "ios"],
-      "nivel": 1,
-      "usos": ["Pitch de ventas", "Storytelling de producto", "Presentaciones interactivas"],
-      "alt": ["gamma", "canva", "beautifulai"],
-      "score": 7.8,
-      "destacado": false,
       "agregado": "2026-06-01"
     },
     {
@@ -2163,7 +3571,9 @@
       "empresa": "Beautiful.ai",
       "url": "https://beautiful.ai",
       "desc": "Presentaciones que se maquetan solas siguiendo reglas de diseno profesional. Muy usado en entornos corporativos.",
-      "cat": ["presentaciones"],
+      "cat": [
+        "presentaciones"
+      ],
       "precio": "pago",
       "desde": 12,
       "gratis": null,
@@ -2171,10 +3581,20 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Diapositivas corporativas", "Plantillas de marca", "Equipos sin disenador"],
-      "alt": ["gamma", "canva", "tome"],
+      "usos": [
+        "Diapositivas corporativas",
+        "Plantillas de marca",
+        "Equipos sin disenador"
+      ],
+      "alt": [
+        "gamma",
+        "canva",
+        "figma-ai"
+      ],
       "score": 7.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2185,7 +3605,10 @@
       "empresa": "Figma",
       "url": "https://figma.com",
       "desc": "El estandar de diseno de interfaces, con generacion de disenos, renombrado de capas, busqueda visual y paso a codigo.",
-      "cat": ["diseno", "no-code"],
+      "cat": [
+        "diseno",
+        "no-code"
+      ],
       "precio": "freemium",
       "desde": 16,
       "gratis": "3 archivos de diseno y funciones IA limitadas",
@@ -2193,10 +3616,22 @@
       "oss": false,
       "es": 5,
       "priv": "opt-out",
-      "plat": ["web", "win", "mac"],
+      "plat": [
+        "web",
+        "win",
+        "mac"
+      ],
       "nivel": 2,
-      "usos": ["Diseno de producto", "Prototipos interactivos", "Handoff a desarrollo"],
-      "alt": ["v0", "uizard", "canva"],
+      "usos": [
+        "Diseno de producto",
+        "Prototipos interactivos",
+        "Handoff a desarrollo"
+      ],
+      "alt": [
+        "v0",
+        "uizard",
+        "canva"
+      ],
       "score": 9.1,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2207,7 +3642,10 @@
       "empresa": "Miro",
       "url": "https://uizard.io",
       "desc": "Convierte un boceto en papel o una captura de pantalla en un prototipo editable de app o web.",
-      "cat": ["diseno", "no-code"],
+      "cat": [
+        "diseno",
+        "no-code"
+      ],
       "precio": "freemium",
       "desde": 12,
       "gratis": "2 proyectos con generaciones limitadas",
@@ -2215,35 +3653,59 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["De boceto a prototipo", "Wireframes rapidos", "Validar ideas con usuarios"],
-      "alt": ["figma-ai", "galileo", "v0"],
+      "usos": [
+        "De boceto a prototipo",
+        "Wireframes rapidos",
+        "Validar ideas con usuarios"
+      ],
+      "alt": [
+        "figma-ai",
+        "galileo",
+        "v0"
+      ],
       "score": 7.7,
       "destacado": false,
       "agregado": "2026-06-01"
     },
     {
       "id": "galileo",
-      "nombre": "Galileo AI",
+      "nombre": "Stitch",
       "empresa": "Google",
-      "url": "https://usegalileo.ai",
-      "desc": "Genera pantallas de aplicacion completas y editables en Figma a partir de una descripcion en lenguaje natural.",
-      "cat": ["diseno"],
-      "precio": "freemium",
-      "desde": 19,
-      "gratis": "Generaciones de prueba limitadas",
+      "url": "https://stitch.withgoogle.com",
+      "desc": "Antes Galileo AI: Google la compró y la convirtió en Stitch. Genera pantallas de app y su código frontend desde texto o una captura. Gratis en fase experimental.",
+      "cat": [
+        "diseno"
+      ],
+      "precio": "gratis",
+      "desde": 0,
+      "gratis": "Gratuito en vista previa, con un límite mensual de generaciones",
       "api": false,
       "oss": false,
-      "es": 3,
+      "es": 4,
       "priv": "opt-out",
-      "plat": ["web"],
-      "nivel": 2,
-      "usos": ["Pantallas de app", "Explorar direcciones de diseno", "Acelerar UI"],
-      "alt": ["uizard", "figma-ai", "v0"],
-      "score": 7.5,
-      "destacado": false,
-      "agregado": "2026-06-01"
+      "plat": [
+        "web"
+      ],
+      "nivel": 1,
+      "usos": [
+        "Pantallas de app desde texto",
+        "De diseño a código",
+        "Prototipos sin coste"
+      ],
+      "alt": [
+        "uizard",
+        "figma-ai",
+        "v0",
+        "antigravity"
+      ],
+      "score": 8.4,
+      "destacado": true,
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "spline",
@@ -2251,7 +3713,10 @@
       "empresa": "Spline",
       "url": "https://spline.design",
       "desc": "Diseno 3D en el navegador con generacion de objetos, texturas y escenas por texto. Exporta a web sin saber WebGL.",
-      "cat": ["3d", "diseno"],
+      "cat": [
+        "3d",
+        "diseno"
+      ],
       "precio": "freemium",
       "desde": 9,
       "gratis": "Proyectos gratuitos con funciones IA limitadas",
@@ -2259,10 +3724,22 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "win", "mac"],
+      "plat": [
+        "web",
+        "win",
+        "mac"
+      ],
       "nivel": 2,
-      "usos": ["3D para webs", "Escenas interactivas", "Iconos y objetos 3D"],
-      "alt": ["meshy", "luma-genie", "tripo3d"],
+      "usos": [
+        "3D para webs",
+        "Escenas interactivas",
+        "Iconos y objetos 3D"
+      ],
+      "alt": [
+        "meshy",
+        "luma-genie",
+        "tripo3d"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2273,7 +3750,9 @@
       "empresa": "Meshy",
       "url": "https://meshy.ai",
       "desc": "Genera modelos 3D con texturas a partir de texto o una imagen, listos para juegos e impresion 3D.",
-      "cat": ["3d"],
+      "cat": [
+        "3d"
+      ],
       "precio": "freemium",
       "desde": 16,
       "gratis": "200 creditos mensuales gratuitos",
@@ -2281,10 +3760,21 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "win"],
+      "plat": [
+        "web",
+        "win"
+      ],
       "nivel": 1,
-      "usos": ["Assets para videojuegos", "Impresion 3D", "Prototipos de producto"],
-      "alt": ["tripo3d", "luma-genie", "spline"],
+      "usos": [
+        "Assets para videojuegos",
+        "Impresion 3D",
+        "Prototipos de producto"
+      ],
+      "alt": [
+        "tripo3d",
+        "luma-genie",
+        "spline"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2295,7 +3785,9 @@
       "empresa": "VAST",
       "url": "https://tripo3d.ai",
       "desc": "Generacion 3D muy rapida desde imagen o texto, con buen retopologizado y creditos gratuitos diarios.",
-      "cat": ["3d"],
+      "cat": [
+        "3d"
+      ],
       "precio": "freemium",
       "desde": 16.9,
       "gratis": "Creditos diarios gratuitos",
@@ -2303,10 +3795,20 @@
       "oss": true,
       "es": 3,
       "priv": "opt-out",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Mallas limpias para 3D", "Assets rapidos", "Pipeline de juegos"],
-      "alt": ["meshy", "luma-genie"],
+      "usos": [
+        "Mallas limpias para 3D",
+        "Assets rapidos",
+        "Pipeline de juegos"
+      ],
+      "alt": [
+        "meshy",
+        "luma-genie"
+      ],
       "score": 8.1,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2317,7 +3819,9 @@
       "empresa": "Luma AI",
       "url": "https://lumalabs.ai/genie",
       "desc": "Genera objetos 3D desde texto y captura escenas reales con el movil mediante campos de radiancia.",
-      "cat": ["3d"],
+      "cat": [
+        "3d"
+      ],
       "precio": "freemium",
       "desde": 9.99,
       "gratis": "Generaciones gratuitas limitadas",
@@ -2325,10 +3829,21 @@
       "oss": false,
       "es": 3,
       "priv": "opt-out",
-      "plat": ["web", "ios"],
+      "plat": [
+        "web",
+        "ios"
+      ],
       "nivel": 2,
-      "usos": ["Escanear objetos reales", "Assets 3D", "Realidad aumentada"],
-      "alt": ["meshy", "tripo3d", "spline"],
+      "usos": [
+        "Escanear objetos reales",
+        "Assets 3D",
+        "Realidad aumentada"
+      ],
+      "alt": [
+        "meshy",
+        "tripo3d",
+        "spline"
+      ],
       "score": 7.9,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2339,7 +3854,11 @@
       "empresa": "n8n",
       "url": "https://n8n.io",
       "desc": "Automatizacion visual con nodos de IA y agentes, autoalojable gratis. La opcion favorita de quien quiere control y coste cero.",
-      "cat": ["agentes", "productividad", "local"],
+      "cat": [
+        "agentes",
+        "productividad",
+        "local"
+      ],
       "precio": "freemium",
       "desde": 24,
       "gratis": "Version autoalojada gratuita e ilimitada",
@@ -2347,10 +3866,24 @@
       "oss": true,
       "es": 4,
       "priv": "local",
-      "plat": ["web", "linux", "win", "mac"],
+      "plat": [
+        "web",
+        "linux",
+        "win",
+        "mac"
+      ],
       "nivel": 3,
-      "usos": ["Automatizar procesos con IA", "Agentes conectados a tus datos", "Sustituir Zapier sin cuota"],
-      "alt": ["make", "zapier", "flowise", "dify"],
+      "usos": [
+        "Automatizar procesos con IA",
+        "Agentes conectados a tus datos",
+        "Sustituir Zapier sin cuota"
+      ],
+      "alt": [
+        "make",
+        "zapier",
+        "flowise",
+        "dify"
+      ],
       "score": 9.2,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2361,7 +3894,11 @@
       "empresa": "Make",
       "url": "https://make.com",
       "desc": "Automatizacion visual con miles de integraciones y modulos de IA. Mas potente que Zapier y mas barato en volumen.",
-      "cat": ["agentes", "productividad", "marketing"],
+      "cat": [
+        "agentes",
+        "productividad",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 9,
       "gratis": "1.000 operaciones al mes",
@@ -2369,10 +3906,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Conectar apps de negocio", "Flujos con IA", "Automatizar marketing"],
-      "alt": ["n8n", "zapier", "relevance"],
+      "usos": [
+        "Conectar apps de negocio",
+        "Flujos con IA",
+        "Automatizar marketing"
+      ],
+      "alt": [
+        "n8n",
+        "zapier",
+        "relevance"
+      ],
       "score": 8.8,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2383,7 +3930,10 @@
       "empresa": "Zapier",
       "url": "https://zapier.com",
       "desc": "El veterano de la automatizacion, con mas de 7.000 integraciones y agentes de IA que actuan sobre ellas.",
-      "cat": ["agentes", "productividad"],
+      "cat": [
+        "agentes",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 19.99,
       "gratis": "100 tareas al mes con flujos de un paso",
@@ -2391,10 +3941,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ext"],
+      "plat": [
+        "web",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Automatizacion sin codigo", "Integrar herramientas de oficina", "Agentes sencillos"],
-      "alt": ["make", "n8n"],
+      "usos": [
+        "Automatizacion sin codigo",
+        "Integrar herramientas de oficina",
+        "Agentes sencillos"
+      ],
+      "alt": [
+        "make",
+        "n8n"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2405,7 +3965,11 @@
       "empresa": "Dify",
       "url": "https://dify.ai",
       "desc": "Plataforma abierta para construir y publicar aplicaciones de IA con RAG, agentes y observabilidad. Autoalojable.",
-      "cat": ["agentes", "no-code", "local"],
+      "cat": [
+        "agentes",
+        "no-code",
+        "local"
+      ],
       "precio": "freemium",
       "desde": 59,
       "gratis": "Version autoalojada gratuita y nube con limites",
@@ -2413,10 +3977,22 @@
       "oss": true,
       "es": 4,
       "priv": "local",
-      "plat": ["web", "linux"],
+      "plat": [
+        "web",
+        "linux"
+      ],
       "nivel": 3,
-      "usos": ["Chatbots sobre documentacion propia", "Apps de IA para clientes", "Prototipar y medir prompts"],
-      "alt": ["flowise", "langflow", "open-webui", "n8n"],
+      "usos": [
+        "Chatbots sobre documentacion propia",
+        "Apps de IA para clientes",
+        "Prototipar y medir prompts"
+      ],
+      "alt": [
+        "flowise",
+        "langflow",
+        "open-webui",
+        "n8n"
+      ],
       "score": 8.7,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2427,7 +4003,11 @@
       "empresa": "Flowise",
       "url": "https://flowiseai.com",
       "desc": "Constructor visual de flujos y agentes LLM de codigo abierto. Arrastra nodos y publica un chatbot embebible.",
-      "cat": ["agentes", "no-code", "local"],
+      "cat": [
+        "agentes",
+        "no-code",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Autoalojado libre y sin limites",
@@ -2435,10 +4015,23 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["web", "linux", "win", "mac"],
+      "plat": [
+        "web",
+        "linux",
+        "win",
+        "mac"
+      ],
       "nivel": 3,
-      "usos": ["Chatbot para tu web", "Prototipos de RAG", "Aprender arquitecturas LLM"],
-      "alt": ["dify", "langflow", "n8n"],
+      "usos": [
+        "Chatbot para tu web",
+        "Prototipos de RAG",
+        "Aprender arquitecturas LLM"
+      ],
+      "alt": [
+        "dify",
+        "langflow",
+        "n8n"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2449,7 +4042,11 @@
       "empresa": "IBM / DataStax",
       "url": "https://langflow.org",
       "desc": "Editor visual para componer cadenas y agentes con LangChain, con exportacion directa a codigo Python.",
-      "cat": ["agentes", "codigo", "local"],
+      "cat": [
+        "agentes",
+        "codigo",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Libre y autoalojable",
@@ -2457,10 +4054,23 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["web", "linux", "win", "mac"],
+      "plat": [
+        "web",
+        "linux",
+        "win",
+        "mac"
+      ],
       "nivel": 3,
-      "usos": ["Prototipar agentes", "Pasar de visual a codigo", "Ensenar LLMs"],
-      "alt": ["flowise", "dify", "crewai"],
+      "usos": [
+        "Prototipar agentes",
+        "Pasar de visual a codigo",
+        "Ensenar LLMs"
+      ],
+      "alt": [
+        "flowise",
+        "dify",
+        "crewai"
+      ],
       "score": 8.1,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2471,7 +4081,10 @@
       "empresa": "CrewAI",
       "url": "https://crewai.com",
       "desc": "Framework en Python para orquestar equipos de agentes con roles y tareas. Referencia en sistemas multiagente.",
-      "cat": ["agentes", "codigo"],
+      "cat": [
+        "agentes",
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 99,
       "gratis": "Framework de codigo abierto gratuito",
@@ -2479,10 +4092,24 @@
       "oss": true,
       "es": 3,
       "priv": "local",
-      "plat": ["cli", "api", "linux", "win", "mac"],
+      "plat": [
+        "cli",
+        "api",
+        "linux",
+        "win",
+        "mac"
+      ],
       "nivel": 3,
-      "usos": ["Equipos de agentes especializados", "Procesos de negocio automatizados", "Investigacion automatizada"],
-      "alt": ["langflow", "dify", "relevance"],
+      "usos": [
+        "Equipos de agentes especializados",
+        "Procesos de negocio automatizados",
+        "Investigacion automatizada"
+      ],
+      "alt": [
+        "langflow",
+        "dify",
+        "relevance"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2492,8 +4119,11 @@
       "nombre": "Manus",
       "empresa": "Butterfly Effect",
       "url": "https://manus.im",
-      "desc": "Agente autonomo general que navega, investiga y entrega informes, hojas de calculo o webs terminadas sin supervision.",
-      "cat": ["agentes", "investigacion"],
+      "desc": "Agente autónomo general que navega, investiga y entrega informes u hojas de cálculo terminadas. Meta intentó comprarla en 2026 y China bloqueó la operación; sigue independiente.",
+      "cat": [
+        "agentes",
+        "investigacion"
+      ],
       "precio": "pago",
       "desde": 19,
       "gratis": "Creditos diarios muy limitados",
@@ -2501,13 +4131,26 @@
       "oss": false,
       "es": 4,
       "priv": "opt-out",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 2,
-      "usos": ["Investigacion de mercado", "Informes completos", "Tareas largas sin supervision"],
-      "alt": ["chatgpt", "kimi", "relevance"],
+      "usos": [
+        "Investigacion de mercado",
+        "Informes completos",
+        "Tareas largas sin supervision"
+      ],
+      "alt": [
+        "chatgpt",
+        "kimi",
+        "relevance"
+      ],
       "score": 8.4,
       "destacado": false,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-09-24"
     },
     {
       "id": "relevance",
@@ -2515,7 +4158,10 @@
       "empresa": "Relevance AI",
       "url": "https://relevanceai.com",
       "desc": "Plataforma para crear plantillas de trabajadores digitales (ventas, soporte, investigacion) sin escribir codigo.",
-      "cat": ["agentes", "marketing"],
+      "cat": [
+        "agentes",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 19,
       "gratis": "100 creditos diarios",
@@ -2523,11 +4169,21 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Agentes de prospeccion", "Soporte automatizado", "Enriquecer bases de datos"],
-      "alt": ["make", "crewai", "manus"],
-      "score": 8.0,
+      "usos": [
+        "Agentes de prospeccion",
+        "Soporte automatizado",
+        "Enriquecer bases de datos"
+      ],
+      "alt": [
+        "make",
+        "crewai",
+        "manus"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -2537,7 +4193,10 @@
       "empresa": "Notion",
       "url": "https://notion.com/product/ai",
       "desc": "IA dentro de tu espacio de trabajo: busca en todas tus notas, redacta, traduce y rellena bases de datos automaticamente.",
-      "cat": ["productividad", "escritura"],
+      "cat": [
+        "productividad",
+        "escritura"
+      ],
       "precio": "pago",
       "desde": 10,
       "gratis": "Notion es gratis; la IA requiere plan de pago",
@@ -2545,10 +4204,24 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "win", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Buscar en tu conocimiento", "Resumir reuniones", "Automatizar bases de datos"],
-      "alt": ["m365-copilot", "taskade", "obsidian"],
+      "usos": [
+        "Buscar en tu conocimiento",
+        "Resumir reuniones",
+        "Automatizar bases de datos"
+      ],
+      "alt": [
+        "m365-copilot",
+        "taskade",
+        "obsidian"
+      ],
       "score": 8.6,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2559,7 +4232,11 @@
       "empresa": "Microsoft",
       "url": "https://microsoft.com/microsoft-365/copilot",
       "desc": "IA integrada en Word, Excel, PowerPoint, Outlook y Teams, con acceso a los datos de tu organizacion.",
-      "cat": ["productividad", "presentaciones", "datos"],
+      "cat": [
+        "productividad",
+        "presentaciones",
+        "datos"
+      ],
       "precio": "pago",
       "desde": 30,
       "gratis": null,
@@ -2567,10 +4244,24 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "win", "mac", "ios", "android"],
+      "plat": [
+        "web",
+        "win",
+        "mac",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Excel y PowerPoint asistidos", "Resumir hilos de Outlook", "Actas de Teams"],
-      "alt": ["gemini", "notion-ai", "canva"],
+      "usos": [
+        "Excel y PowerPoint asistidos",
+        "Resumir hilos de Outlook",
+        "Actas de Teams"
+      ],
+      "alt": [
+        "gemini",
+        "notion-ai",
+        "canva"
+      ],
       "score": 8.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2581,7 +4272,11 @@
       "empresa": "Obsidian / Comunidad",
       "url": "https://obsidian.md",
       "desc": "Notas locales en Markdown con complementos de IA que funcionan contra modelos propios. Tu segundo cerebro sin la nube.",
-      "cat": ["productividad", "local", "escritura"],
+      "cat": [
+        "productividad",
+        "local",
+        "escritura"
+      ],
       "precio": "freemium",
       "desde": 4,
       "gratis": "Aplicacion gratuita para uso personal con complementos libres",
@@ -2589,10 +4284,24 @@
       "oss": false,
       "es": 5,
       "priv": "local",
-      "plat": ["win", "mac", "linux", "ios", "android"],
+      "plat": [
+        "win",
+        "mac",
+        "linux",
+        "ios",
+        "android"
+      ],
       "nivel": 2,
-      "usos": ["Notas privadas con IA", "Buscar en tu propio archivo", "Escritura de largo aliento"],
-      "alt": ["notion-ai", "anythingllm", "mem"],
+      "usos": [
+        "Notas privadas con IA",
+        "Buscar en tu propio archivo",
+        "Escritura de largo aliento"
+      ],
+      "alt": [
+        "notion-ai",
+        "anythingllm",
+        "mem"
+      ],
       "score": 8.7,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2603,7 +4312,9 @@
       "empresa": "Mem Labs",
       "url": "https://mem.ai",
       "desc": "Bloc de notas que se organiza solo: etiqueta, relaciona y recupera lo que escribiste sin que crees carpetas.",
-      "cat": ["productividad"],
+      "cat": [
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 14.99,
       "gratis": "Notas limitadas con funciones IA basicas",
@@ -2611,10 +4322,21 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Notas sin estructura", "Recuperar ideas antiguas", "Diario de trabajo"],
-      "alt": ["notion-ai", "obsidian"],
+      "usos": [
+        "Notas sin estructura",
+        "Recuperar ideas antiguas",
+        "Diario de trabajo"
+      ],
+      "alt": [
+        "notion-ai",
+        "obsidian"
+      ],
       "score": 7.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2625,7 +4347,10 @@
       "empresa": "Taskade",
       "url": "https://taskade.com",
       "desc": "Gestion de tareas y proyectos con agentes de IA que ejecutan flujos sobre tus propias listas y documentos.",
-      "cat": ["productividad", "agentes"],
+      "cat": [
+        "productividad",
+        "agentes"
+      ],
       "precio": "freemium",
       "desde": 8,
       "gratis": "Proyectos ilimitados con creditos de IA mensuales",
@@ -2633,10 +4358,24 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "win", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Planificar proyectos", "Agentes sobre tus tareas", "Equipos pequenos"],
-      "alt": ["notion-ai", "motion", "reclaim"],
+      "usos": [
+        "Planificar proyectos",
+        "Agentes sobre tus tareas",
+        "Equipos pequenos"
+      ],
+      "alt": [
+        "notion-ai",
+        "motion",
+        "reclaim"
+      ],
       "score": 7.8,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2647,7 +4386,9 @@
       "empresa": "Motion",
       "url": "https://usemotion.com",
       "desc": "Reorganiza tu calendario cada dia segun prioridades y plazos reales. Planificacion automatica para agendas saturadas.",
-      "cat": ["productividad"],
+      "cat": [
+        "productividad"
+      ],
       "precio": "pago",
       "desde": 29,
       "gratis": null,
@@ -2655,11 +4396,24 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "win", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Planificar el dia solo", "Priorizar tareas", "Proteger tiempo de foco"],
-      "alt": ["reclaim", "taskade"],
-      "score": 8.0,
+      "usos": [
+        "Planificar el dia solo",
+        "Priorizar tareas",
+        "Proteger tiempo de foco"
+      ],
+      "alt": [
+        "reclaim",
+        "taskade"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -2669,7 +4423,9 @@
       "empresa": "Dropbox",
       "url": "https://reclaim.ai",
       "desc": "Defiende tu tiempo en Google Calendar: agenda habitos, pausas y tareas, y reprograma cuando surge una reunion.",
-      "cat": ["productividad"],
+      "cat": [
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 10,
       "gratis": "Funciones basicas con 1 calendario",
@@ -2677,10 +4433,20 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ext"],
+      "plat": [
+        "web",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Bloques de foco", "Habitos recurrentes", "Equilibrio de agenda"],
-      "alt": ["motion", "taskade"],
+      "usos": [
+        "Bloques de foco",
+        "Habitos recurrentes",
+        "Equilibrio de agenda"
+      ],
+      "alt": [
+        "motion",
+        "taskade"
+      ],
       "score": 8.1,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2691,7 +4457,10 @@
       "empresa": "Grammarly",
       "url": "https://superhuman.com",
       "desc": "Cliente de correo rapidisimo con resumenes, respuestas escritas en tu tono y triaje automatico de bandeja.",
-      "cat": ["productividad", "escritura"],
+      "cat": [
+        "productividad",
+        "escritura"
+      ],
       "precio": "pago",
       "desde": 25,
       "gratis": null,
@@ -2699,11 +4468,24 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "win", "mac"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Vaciar la bandeja de entrada", "Responder mas rapido", "Seguimiento de correos"],
-      "alt": ["gemini", "m365-copilot"],
-      "score": 8.0,
+      "usos": [
+        "Vaciar la bandeja de entrada",
+        "Responder mas rapido",
+        "Seguimiento de correos"
+      ],
+      "alt": [
+        "gemini",
+        "m365-copilot"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -2713,7 +4495,10 @@
       "empresa": "Grammarly",
       "url": "https://grammarly.com",
       "desc": "Corrector y asistente de estilo que funciona en cualquier aplicacion. Referencia absoluta para escribir en ingles.",
-      "cat": ["escritura", "productividad"],
+      "cat": [
+        "escritura",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 12,
       "gratis": "Correccion gramatical y ortografica ilimitada",
@@ -2721,10 +4506,25 @@
       "oss": false,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web", "ext", "win", "mac", "ios", "android"],
+      "plat": [
+        "web",
+        "ext",
+        "win",
+        "mac",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Escribir en ingles", "Ajustar el tono", "Detectar plagio"],
-      "alt": ["languagetool", "quillbot", "wordtune"],
+      "usos": [
+        "Escribir en ingles",
+        "Ajustar el tono",
+        "Detectar plagio"
+      ],
+      "alt": [
+        "languagetool",
+        "quillbot",
+        "wordtune"
+      ],
       "score": 8.7,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2735,7 +4535,10 @@
       "empresa": "LanguageTool",
       "url": "https://languagetool.org",
       "desc": "Corrector de codigo abierto con el mejor soporte de espanol y mas de 30 idiomas. Se puede autoalojar.",
-      "cat": ["escritura", "local"],
+      "cat": [
+        "escritura",
+        "local"
+      ],
       "precio": "freemium",
       "desde": 4.99,
       "gratis": "Correccion gratuita hasta 10.000 caracteres por revision",
@@ -2743,10 +4546,24 @@
       "oss": true,
       "es": 5,
       "priv": "local",
-      "plat": ["web", "ext", "win", "mac", "linux"],
+      "plat": [
+        "web",
+        "ext",
+        "win",
+        "mac",
+        "linux"
+      ],
       "nivel": 1,
-      "usos": ["Corregir espanol", "Alternativa libre a Grammarly", "Servidor propio de correccion"],
-      "alt": ["grammarly", "quillbot", "deepl"],
+      "usos": [
+        "Corregir espanol",
+        "Alternativa libre a Grammarly",
+        "Servidor propio de correccion"
+      ],
+      "alt": [
+        "grammarly",
+        "quillbot",
+        "deepl"
+      ],
       "score": 8.5,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2757,7 +4574,10 @@
       "empresa": "DeepL",
       "url": "https://deepl.com",
       "desc": "La traduccion automatica con mejor matiz del mercado, ahora con reescritura de estilo y traduccion de documentos.",
-      "cat": ["escritura", "productividad"],
+      "cat": [
+        "escritura",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 8.74,
       "gratis": "Traduccion web ilimitada y 3 documentos al mes",
@@ -2765,10 +4585,26 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "win", "mac", "ios", "android", "ext", "api"],
+      "plat": [
+        "web",
+        "win",
+        "mac",
+        "ios",
+        "android",
+        "ext",
+        "api"
+      ],
       "nivel": 1,
-      "usos": ["Traducir documentos", "Correos en otro idioma", "Localizar contenido"],
-      "alt": ["languagetool", "quillbot", "gemini"],
+      "usos": [
+        "Traducir documentos",
+        "Correos en otro idioma",
+        "Localizar contenido"
+      ],
+      "alt": [
+        "languagetool",
+        "quillbot",
+        "gemini"
+      ],
       "score": 9.2,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2779,7 +4615,10 @@
       "empresa": "Course Hero",
       "url": "https://quillbot.com",
       "desc": "Parafrasea, resume, corrige y genera citas. Muy popular entre estudiantes para reescribir sin perder el sentido.",
-      "cat": ["escritura", "educacion"],
+      "cat": [
+        "escritura",
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 9.95,
       "gratis": "Parafraseo de 125 palabras por vez y resumidor limitado",
@@ -2787,11 +4626,24 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ext", "win", "mac"],
+      "plat": [
+        "web",
+        "ext",
+        "win",
+        "mac"
+      ],
       "nivel": 1,
-      "usos": ["Reescribir textos", "Resumir lecturas", "Citas y bibliografia"],
-      "alt": ["wordtune", "grammarly", "languagetool"],
-      "score": 8.0,
+      "usos": [
+        "Reescribir textos",
+        "Resumir lecturas",
+        "Citas y bibliografia"
+      ],
+      "alt": [
+        "wordtune",
+        "grammarly",
+        "languagetool"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -2801,7 +4653,9 @@
       "empresa": "AI21 Labs",
       "url": "https://wordtune.com",
       "desc": "Sugiere formas alternativas de decir la misma frase, ajustando registro y longitud sin cambiar tu intencion.",
-      "cat": ["escritura"],
+      "cat": [
+        "escritura"
+      ],
       "precio": "freemium",
       "desde": 6.99,
       "gratis": "10 reescrituras diarias",
@@ -2809,10 +4663,20 @@
       "oss": false,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web", "ext"],
+      "plat": [
+        "web",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Mejorar frases", "Cambiar de tono", "Escribir mas claro"],
-      "alt": ["quillbot", "grammarly"],
+      "usos": [
+        "Mejorar frases",
+        "Cambiar de tono",
+        "Escribir mas claro"
+      ],
+      "alt": [
+        "quillbot",
+        "grammarly"
+      ],
       "score": 7.5,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2823,7 +4687,10 @@
       "empresa": "Jasper",
       "url": "https://jasper.ai",
       "desc": "Plataforma de contenido de marketing para empresas, con voz de marca entrenada, campanas y control de cumplimiento.",
-      "cat": ["marketing", "escritura"],
+      "cat": [
+        "marketing",
+        "escritura"
+      ],
       "precio": "pago",
       "desde": 49,
       "gratis": null,
@@ -2831,10 +4698,21 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ext"],
+      "plat": [
+        "web",
+        "ext"
+      ],
       "nivel": 2,
-      "usos": ["Contenido a escala con voz de marca", "Campanas multicanal", "Equipos de marketing"],
-      "alt": ["copyai", "writesonic", "chatgpt"],
+      "usos": [
+        "Contenido a escala con voz de marca",
+        "Campanas multicanal",
+        "Equipos de marketing"
+      ],
+      "alt": [
+        "copyai",
+        "writesonic",
+        "chatgpt"
+      ],
       "score": 8.2,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2845,7 +4723,10 @@
       "empresa": "Copy.ai",
       "url": "https://copy.ai",
       "desc": "Automatiza procesos de marketing y ventas con flujos de IA: prospeccion, resumenes de cuenta y contenido.",
-      "cat": ["marketing", "agentes"],
+      "cat": [
+        "marketing",
+        "agentes"
+      ],
       "precio": "freemium",
       "desde": 49,
       "gratis": "2.000 palabras mensuales",
@@ -2853,10 +4734,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 2,
-      "usos": ["Emails de prospeccion", "Contenido de blog", "Procesos de GTM"],
-      "alt": ["jasper", "writesonic", "relevance"],
+      "usos": [
+        "Emails de prospeccion",
+        "Contenido de blog",
+        "Procesos de GTM"
+      ],
+      "alt": [
+        "jasper",
+        "writesonic",
+        "relevance"
+      ],
       "score": 7.9,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2867,7 +4758,11 @@
       "empresa": "Writesonic",
       "url": "https://writesonic.com",
       "desc": "Redaccion SEO con datos reales de posicionamiento, auditoria de contenido y publicacion directa en WordPress.",
-      "cat": ["marketing", "escritura", "busqueda"],
+      "cat": [
+        "marketing",
+        "escritura",
+        "busqueda"
+      ],
       "precio": "freemium",
       "desde": 39,
       "gratis": "Creditos mensuales de prueba",
@@ -2875,10 +4770,21 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ext"],
+      "plat": [
+        "web",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Articulos optimizados para SEO", "Auditoria de contenido", "Blogs en volumen"],
-      "alt": ["jasper", "copyai", "chatgpt"],
+      "usos": [
+        "Articulos optimizados para SEO",
+        "Auditoria de contenido",
+        "Blogs en volumen"
+      ],
+      "alt": [
+        "jasper",
+        "copyai",
+        "chatgpt"
+      ],
       "score": 7.7,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2889,7 +4795,10 @@
       "empresa": "Julius",
       "url": "https://julius.ai",
       "desc": "Analista de datos conversacional: subes un Excel o CSV y obtienes graficos, modelos y conclusiones explicadas.",
-      "cat": ["datos", "investigacion"],
+      "cat": [
+        "datos",
+        "investigacion"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "15 mensajes al mes",
@@ -2897,10 +4806,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Analizar hojas de calculo", "Graficos y estadistica", "Informes de datos"],
-      "alt": ["chatgpt", "rows", "m365-copilot"],
+      "usos": [
+        "Analizar hojas de calculo",
+        "Graficos y estadistica",
+        "Informes de datos"
+      ],
+      "alt": [
+        "chatgpt",
+        "rows",
+        "m365-copilot"
+      ],
       "score": 8.4,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2911,7 +4830,10 @@
       "empresa": "Rows",
       "url": "https://rows.com",
       "desc": "Hoja de calculo moderna con IA integrada y conectores nativos a Stripe, Google Analytics, bases de datos y APIs.",
-      "cat": ["datos", "productividad"],
+      "cat": [
+        "datos",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 15,
       "gratis": "Hojas ilimitadas con creditos de IA mensuales",
@@ -2919,11 +4841,20 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Paneles de negocio", "Informes automaticos", "Enriquecer listas"],
-      "alt": ["julius", "m365-copilot"],
-      "score": 8.0,
+      "usos": [
+        "Paneles de negocio",
+        "Informes automaticos",
+        "Enriquecer listas"
+      ],
+      "alt": [
+        "julius",
+        "m365-copilot"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -2933,7 +4864,9 @@
       "empresa": "Khan Academy",
       "url": "https://khanmigo.ai",
       "desc": "Tutor de IA que guia con preguntas en vez de dar la respuesta. Gratis para docentes en varios paises.",
-      "cat": ["educacion"],
+      "cat": [
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 4,
       "gratis": "Gratuito para docentes; contenido de Khan Academy siempre libre",
@@ -2941,10 +4874,20 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Tutoria de matematicas", "Apoyo escolar", "Planificacion de clases"],
-      "alt": ["magicschool", "notebooklm", "chatgpt"],
+      "usos": [
+        "Tutoria de matematicas",
+        "Apoyo escolar",
+        "Planificacion de clases"
+      ],
+      "alt": [
+        "magicschool",
+        "notebooklm",
+        "chatgpt"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2955,7 +4898,9 @@
       "empresa": "MagicSchool",
       "url": "https://magicschool.ai",
       "desc": "Mas de 80 herramientas para docentes: rubricas, adaptaciones curriculares, comunicaciones a familias y examenes.",
-      "cat": ["educacion"],
+      "cat": [
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 12.99,
       "gratis": "Plan gratuito con generaciones mensuales amplias",
@@ -2963,10 +4908,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Preparar clases", "Rubricas de evaluacion", "Adaptaciones para diversidad"],
-      "alt": ["diffit", "khanmigo", "quizizz"],
+      "usos": [
+        "Preparar clases",
+        "Rubricas de evaluacion",
+        "Adaptaciones para diversidad"
+      ],
+      "alt": [
+        "diffit",
+        "khanmigo",
+        "quizizz"
+      ],
       "score": 8.6,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -2977,7 +4932,9 @@
       "empresa": "Diffit",
       "url": "https://diffit.me",
       "desc": "Adapta cualquier texto o articulo al nivel de lectura de tus alumnos y genera preguntas y vocabulario.",
-      "cat": ["educacion"],
+      "cat": [
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 12,
       "gratis": "Uso gratuito con limites diarios",
@@ -2985,10 +4942,19 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Nivelar lecturas", "Material diferenciado", "Comprension lectora"],
-      "alt": ["magicschool", "quizizz"],
+      "usos": [
+        "Nivelar lecturas",
+        "Material diferenciado",
+        "Comprension lectora"
+      ],
+      "alt": [
+        "magicschool",
+        "quizizz"
+      ],
       "score": 8.1,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -2999,7 +4965,9 @@
       "empresa": "Wayground",
       "url": "https://quizizz.com",
       "desc": "Crea cuestionarios y actividades gamificadas a partir de un tema, PDF o video, con correccion automatica.",
-      "cat": ["educacion"],
+      "cat": [
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 9,
       "gratis": "Cuestionarios ilimitados con funciones IA limitadas",
@@ -3007,11 +4975,22 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Evaluacion en clase", "Repaso gamificado", "Deberes autocorregidos"],
-      "alt": ["magicschool", "diffit"],
-      "score": 8.0,
+      "usos": [
+        "Evaluacion en clase",
+        "Repaso gamificado",
+        "Deberes autocorregidos"
+      ],
+      "alt": [
+        "magicschool",
+        "diffit"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -3021,7 +5000,10 @@
       "empresa": "You.com",
       "url": "https://you.com",
       "desc": "Buscador con IA orientado a investigacion profunda, con modos multiagente y acceso a varios modelos en un solo lugar.",
-      "cat": ["busqueda", "investigacion"],
+      "cat": [
+        "busqueda",
+        "investigacion"
+      ],
       "precio": "freemium",
       "desde": 15,
       "gratis": "Busquedas basicas ilimitadas y consultas avanzadas limitadas",
@@ -3029,11 +5011,23 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Investigacion con varios modelos", "Busqueda privada", "Informes con fuentes"],
-      "alt": ["perplexity", "exa", "copilot-ms"],
-      "score": 8.0,
+      "usos": [
+        "Investigacion con varios modelos",
+        "Busqueda privada",
+        "Informes con fuentes"
+      ],
+      "alt": [
+        "perplexity",
+        "exa",
+        "copilot-ms"
+      ],
+      "score": 8,
       "destacado": false,
       "agregado": "2026-06-01"
     },
@@ -3043,7 +5037,10 @@
       "empresa": "Exa",
       "url": "https://exa.ai",
       "desc": "Buscador semantico pensado para agentes y desarrolladores: encuentra paginas por significado, no por palabras clave.",
-      "cat": ["busqueda", "agentes"],
+      "cat": [
+        "busqueda",
+        "agentes"
+      ],
       "precio": "freemium",
       "desde": 0,
       "gratis": "Creditos gratuitos iniciales y pago por uso",
@@ -3051,10 +5048,21 @@
       "oss": false,
       "es": 3,
       "priv": "no-entrena",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 3,
-      "usos": ["Dar busqueda web a un agente", "Encontrar empresas o personas", "Investigacion automatizada"],
-      "alt": ["perplexity", "you-com", "semantic-scholar"],
+      "usos": [
+        "Dar busqueda web a un agente",
+        "Encontrar empresas o personas",
+        "Investigacion automatizada"
+      ],
+      "alt": [
+        "perplexity",
+        "you-com",
+        "semantic-scholar"
+      ],
       "score": 8.3,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3065,7 +5073,10 @@
       "empresa": "Phind",
       "url": "https://phind.com",
       "desc": "Buscador para programadores que responde dudas tecnicas con codigo y fuentes de documentacion oficial.",
-      "cat": ["busqueda", "codigo"],
+      "cat": [
+        "busqueda",
+        "codigo"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "Busquedas diarias gratuitas con el modelo estandar",
@@ -3073,10 +5084,21 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "ext"],
+      "plat": [
+        "web",
+        "ext"
+      ],
       "nivel": 2,
-      "usos": ["Resolver errores de codigo", "Buscar en documentacion", "Comparar librerias"],
-      "alt": ["perplexity", "github-copilot", "chatgpt"],
+      "usos": [
+        "Resolver errores de codigo",
+        "Buscar en documentacion",
+        "Comparar librerias"
+      ],
+      "alt": [
+        "perplexity",
+        "github-copilot",
+        "chatgpt"
+      ],
       "score": 7.8,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3087,7 +5109,11 @@
       "empresa": "Stability AI",
       "url": "https://stableaudio.com",
       "desc": "Genera musica y efectos de sonido con licencia comercial clara, y con modelos abiertos para uso local.",
-      "cat": ["musica", "audio", "local"],
+      "cat": [
+        "musica",
+        "audio",
+        "local"
+      ],
       "precio": "freemium",
       "desde": 11.99,
       "gratis": "Generaciones mensuales para uso no comercial",
@@ -3095,10 +5121,21 @@
       "oss": true,
       "es": 3,
       "priv": "opt-out",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 2,
-      "usos": ["Efectos de sonido", "Musica de fondo con licencia", "Sonido para juegos"],
-      "alt": ["suno", "mubert", "udio"],
+      "usos": [
+        "Efectos de sonido",
+        "Musica de fondo con licencia",
+        "Sonido para juegos"
+      ],
+      "alt": [
+        "suno",
+        "mubert",
+        "udio"
+      ],
       "score": 7.9,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3109,7 +5146,11 @@
       "empresa": "Deepgram",
       "url": "https://deepgram.com",
       "desc": "API de voz a texto y texto a voz de muy baja latencia, disenada para agentes de voz en tiempo real.",
-      "cat": ["transcripcion", "audio", "agentes"],
+      "cat": [
+        "transcripcion",
+        "audio",
+        "agentes"
+      ],
       "precio": "freemium",
       "desde": 0,
       "gratis": "200 dolares de credito inicial y pago por uso",
@@ -3117,10 +5158,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["api"],
+      "plat": [
+        "api"
+      ],
       "nivel": 3,
-      "usos": ["Transcripcion en vivo", "Agentes telefonicos", "Analitica de llamadas"],
-      "alt": ["assemblyai", "whisper", "elevenlabs"],
+      "usos": [
+        "Transcripcion en vivo",
+        "Agentes telefonicos",
+        "Analitica de llamadas"
+      ],
+      "alt": [
+        "assemblyai",
+        "whisper",
+        "elevenlabs"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3131,7 +5182,10 @@
       "empresa": "Fathom",
       "url": "https://fathom.video",
       "desc": "Notas de reunion gratis e ilimitadas con resumenes por plantilla y sincronizacion con CRM. El plan gratuito mas generoso.",
-      "cat": ["transcripcion", "productividad"],
+      "cat": [
+        "transcripcion",
+        "productividad"
+      ],
       "precio": "freemium",
       "desde": 19,
       "gratis": "Grabacion, transcripcion y resumenes ilimitados",
@@ -3139,10 +5193,23 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "win", "mac", "ext"],
+      "plat": [
+        "web",
+        "win",
+        "mac",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Actas gratis sin limite", "Seguimiento comercial", "Resumenes por tipo de reunion"],
-      "alt": ["otter", "tldv", "fireflies"],
+      "usos": [
+        "Actas gratis sin limite",
+        "Seguimiento comercial",
+        "Resumenes por tipo de reunion"
+      ],
+      "alt": [
+        "otter",
+        "tldv",
+        "fireflies"
+      ],
       "score": 8.6,
       "destacado": true,
       "agregado": "2026-06-01"
@@ -3153,7 +5220,11 @@
       "empresa": "Riverside",
       "url": "https://riverside.fm",
       "desc": "Grabacion remota de podcast y video en calidad local, con transcripcion, clips automaticos y edicion por texto.",
-      "cat": ["video", "audio", "transcripcion"],
+      "cat": [
+        "video",
+        "audio",
+        "transcripcion"
+      ],
       "precio": "freemium",
       "desde": 15,
       "gratis": "2 horas mensuales de grabacion separada por pistas",
@@ -3161,10 +5232,22 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android"],
+      "plat": [
+        "web",
+        "ios",
+        "android"
+      ],
       "nivel": 1,
-      "usos": ["Entrevistas remotas", "Podcast con video", "Clips para redes"],
-      "alt": ["descript", "opus-clip", "capcut"],
+      "usos": [
+        "Entrevistas remotas",
+        "Podcast con video",
+        "Clips para redes"
+      ],
+      "alt": [
+        "descript",
+        "opus-clip",
+        "capcut"
+      ],
       "score": 8.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3175,7 +5258,10 @@
       "empresa": "Pictory",
       "url": "https://pictory.ai",
       "desc": "Convierte articulos, guiones o grabaciones largas en videos con subtitulos y metraje de archivo automatico.",
-      "cat": ["video", "marketing"],
+      "cat": [
+        "video",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 19,
       "gratis": "Prueba con videos limitados",
@@ -3183,10 +5269,20 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Blog a video", "Resumir webinars", "Contenido en volumen"],
-      "alt": ["invideo", "opus-clip", "capcut"],
+      "usos": [
+        "Blog a video",
+        "Resumir webinars",
+        "Contenido en volumen"
+      ],
+      "alt": [
+        "invideo",
+        "opus-clip",
+        "capcut"
+      ],
       "score": 7.4,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3197,7 +5293,10 @@
       "empresa": "Vizard",
       "url": "https://vizard.ai",
       "desc": "Recorta videos largos en clips verticales listos para publicar, con subtitulos y reencuadre automatico de la cara.",
-      "cat": ["video", "marketing"],
+      "cat": [
+        "video",
+        "marketing"
+      ],
       "precio": "freemium",
       "desde": 20,
       "gratis": "Minutos mensuales gratuitos con exportacion limitada",
@@ -3205,10 +5304,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Clips verticales", "Reutilizar contenido", "Subtitulos multilingues"],
-      "alt": ["opus-clip", "capcut", "descript"],
+      "usos": [
+        "Clips verticales",
+        "Reutilizar contenido",
+        "Subtitulos multilingues"
+      ],
+      "alt": [
+        "opus-clip",
+        "capcut",
+        "descript"
+      ],
       "score": 7.8,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3219,7 +5328,10 @@
       "empresa": "Colossyan",
       "url": "https://colossyan.com",
       "desc": "Video de formacion con avatares y escenarios interactivos con ramificaciones. Muy orientado a e-learning corporativo.",
-      "cat": ["video", "educacion"],
+      "cat": [
+        "video",
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 27,
       "gratis": "Minutos de prueba mensuales",
@@ -3227,10 +5339,20 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web"],
+      "plat": [
+        "web"
+      ],
       "nivel": 1,
-      "usos": ["Formacion interna", "Simulaciones interactivas", "Cursos multilingues"],
-      "alt": ["synthesia", "heygen", "d-id"],
+      "usos": [
+        "Formacion interna",
+        "Simulaciones interactivas",
+        "Cursos multilingues"
+      ],
+      "alt": [
+        "synthesia",
+        "heygen",
+        "d-id"
+      ],
       "score": 7.7,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3241,7 +5363,10 @@
       "empresa": "NaturalSoft",
       "url": "https://naturalreaders.com",
       "desc": "Lector de texto a voz con foco en accesibilidad y educacion, con version gratuita sin limite de uso web.",
-      "cat": ["audio", "educacion"],
+      "cat": [
+        "audio",
+        "educacion"
+      ],
       "precio": "freemium",
       "desde": 9.99,
       "gratis": "Lectura web ilimitada con voces estandar",
@@ -3249,10 +5374,25 @@
       "oss": false,
       "es": 5,
       "priv": "no-entrena",
-      "plat": ["web", "ios", "android", "win", "mac", "ext"],
+      "plat": [
+        "web",
+        "ios",
+        "android",
+        "win",
+        "mac",
+        "ext"
+      ],
       "nivel": 1,
-      "usos": ["Accesibilidad lectora", "Escuchar apuntes", "Revisar textos en voz alta"],
-      "alt": ["speechify", "elevenlabs", "piper"],
+      "usos": [
+        "Accesibilidad lectora",
+        "Escuchar apuntes",
+        "Revisar textos en voz alta"
+      ],
+      "alt": [
+        "speechify",
+        "elevenlabs",
+        "piper"
+      ],
       "score": 7.6,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3263,7 +5403,10 @@
       "empresa": "Comunidad",
       "url": "https://github.com/rhasspy/piper",
       "desc": "Sintesis de voz libre y rapida que funciona sin internet, incluso en una Raspberry Pi. Voces en espanol incluidas.",
-      "cat": ["audio", "local"],
+      "cat": [
+        "audio",
+        "local"
+      ],
       "precio": "oss",
       "desde": 0,
       "gratis": "Libre y sin limites",
@@ -3271,10 +5414,22 @@
       "oss": true,
       "es": 4,
       "priv": "local",
-      "plat": ["linux", "win", "mac", "cli"],
+      "plat": [
+        "linux",
+        "win",
+        "mac",
+        "cli"
+      ],
       "nivel": 3,
-      "usos": ["Voz offline", "Domotica y asistentes locales", "Accesibilidad sin nube"],
-      "alt": ["elevenlabs", "naturalreader"],
+      "usos": [
+        "Voz offline",
+        "Domotica y asistentes locales",
+        "Accesibilidad sin nube"
+      ],
+      "alt": [
+        "elevenlabs",
+        "naturalreader"
+      ],
       "score": 7.8,
       "destacado": false,
       "agregado": "2026-06-01"
@@ -3285,7 +5440,9 @@
       "empresa": "Auphonic",
       "url": "https://auphonic.com",
       "desc": "Posproduccion automatica de audio: nivelacion, reduccion de ruido y normalizacion de sonoridad para podcast.",
-      "cat": ["audio"],
+      "cat": [
+        "audio"
+      ],
       "precio": "freemium",
       "desde": 11,
       "gratis": "2 horas de procesamiento al mes",
@@ -3293,13 +5450,102 @@
       "oss": false,
       "es": 4,
       "priv": "no-entrena",
-      "plat": ["web", "api"],
+      "plat": [
+        "web",
+        "api"
+      ],
       "nivel": 2,
-      "usos": ["Masterizar podcast", "Nivelar varias pistas", "Cumplir normas de sonoridad"],
-      "alt": ["adobe-podcast", "descript", "lalal"],
+      "usos": [
+        "Masterizar podcast",
+        "Nivelar varias pistas",
+        "Cumplir normas de sonoridad"
+      ],
+      "alt": [
+        "adobe-podcast",
+        "descript",
+        "lalal"
+      ],
       "score": 7.7,
       "destacado": false,
       "agregado": "2026-06-01"
+    },
+    {
+      "id": "antigravity",
+      "nombre": "Google Antigravity",
+      "empresa": "Google",
+      "url": "https://antigravity.google",
+      "desc": "Plataforma de desarrollo por agentes de Google: editor, terminal y gestor de agentes que planifican y ejecutan tareas de varios pasos. Absorbió a Gemini CLI en 2026.",
+      "cat": [
+        "codigo",
+        "agentes"
+      ],
+      "precio": "freemium",
+      "desde": 19.99,
+      "gratis": "Plan individual gratuito en vista previa pública, con límites semanales",
+      "api": false,
+      "oss": false,
+      "es": 4,
+      "priv": "no-entrena",
+      "plat": [
+        "win",
+        "mac",
+        "linux",
+        "cli"
+      ],
+      "nivel": 2,
+      "usos": [
+        "Programar con agentes sin pagar",
+        "Tareas de varios pasos",
+        "Alternativa gratuita a Cursor"
+      ],
+      "alt": [
+        "cursor",
+        "claude-code",
+        "windsurf",
+        "cline"
+      ],
+      "score": 8.6,
+      "destacado": true,
+      "agregado": "2026-09-24",
+      "verificado": "2026-09-24"
+    },
+    {
+      "id": "higgsfield",
+      "nombre": "Higgsfield",
+      "empresa": "Higgsfield AI",
+      "url": "https://higgsfield.ai",
+      "desc": "Reúne más de quince modelos de vídeo e imagen (Veo, Kling, Seedance) bajo una sola suscripción, con presets de cámara cinematográficos y personajes consistentes entre clips.",
+      "cat": [
+        "video",
+        "imagen",
+        "marketing"
+      ],
+      "precio": "pago",
+      "desde": 9,
+      "gratis": null,
+      "api": true,
+      "oss": false,
+      "es": 4,
+      "priv": "opt-out",
+      "plat": [
+        "web"
+      ],
+      "nivel": 1,
+      "usos": [
+        "Probar varios modelos de vídeo con un solo pago",
+        "Anuncios y UGC",
+        "Personajes consistentes"
+      ],
+      "alt": [
+        "freepik-ai",
+        "kling",
+        "runway",
+        "poe"
+      ],
+      "score": 8.3,
+      "destacado": false,
+      "agregado": "2026-09-24",
+      "verificado": "2026-09-24"
     }
   ]
 }

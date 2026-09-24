@@ -1,6 +1,6 @@
 # Directorio IA
 
-Directorio comparativo de herramientas de IA generativa: **148 herramientas** en 21 categorías,
+Directorio comparativo de herramientas de IA generativa: **146 herramientas** en 21 categorías,
 con precios, política de privacidad, calidad en español, plataformas y alternativas equivalentes.
 
 Sitio **estático puro**: sin framework, sin build, sin dependencias de npm. Todo el contenido vive
@@ -13,7 +13,7 @@ en un único archivo JSON que puedes editar a mano y publicar en cualquier hosti
 | Función | Qué resuelve |
 | --- | --- |
 | **Búsqueda en lenguaje natural** | Entiende frases como *"quitar el fondo de una foto"* o *"transcribir reuniones"*: quita muletillas, aplica sinónimos en español y recorta raíces (*quitar* encuentra *quita*). |
-| **Filtros combinables** | Precio, presupuesto máximo por herramienta, privacidad de datos, calidad en español, plataforma, nivel técnico, API, código abierto, novedades y favoritos. Cada filtro indica cuántas herramientas cumple. |
+| **Filtros combinables** | Precio, presupuesto máximo por herramienta, privacidad de datos, calidad en español, plataforma, nivel técnico, API, código abierto, novedades, precio comprobado y favoritos. Cada filtro indica cuántas herramientas cumple. |
 | **Asistente de elección** | Cuatro preguntas y devuelve 8 recomendaciones puntuadas, **explicando por qué** encaja cada una. |
 | **Mi stack con presupuesto** | Selecciona herramientas y calcula el coste mensual y anual, con barra de presupuesto. |
 | **Modo ahorro** | Para cada herramienta de pago del stack propone la mejor alternativa sin coste y calcula lo que dejarías de pagar. Distingue lo gratis de verdad de lo que solo tiene plan gratuito. |
@@ -125,7 +125,7 @@ Copia esta plantilla dentro del array `herramientas`:
 | | `freemium` | Plan gratuito útil + planes de pago |
 | | `pago` | Requiere pagar (puede tener prueba) |
 | | `oss` | Código abierto, gratis y autoalojable |
-| `desde` | número | Plan individual mensual de pago más barato, en USD. `0` si no hay que pagar |
+| `desde` | número | Plan individual de referencia en USD/mes: el equivalente a «Pro» o «Plus», **no** el escalón más barato del catálogo del fabricante. Así el comparador enfrenta cosas comparables; los planes de entrada más baratos (ChatGPT Go, Google AI Plus) van en `desc`. `0` si no hay que pagar |
 | `priv` | `local` | Corre en el equipo del usuario, los datos no salen |
 | | `no-entrena` | No entrena sus modelos con datos del usuario por defecto |
 | | `opt-out` | Puede entrenar, pero se desactiva en ajustes |
@@ -138,6 +138,7 @@ Copia esta plantilla dentro del array `herramientas`:
 | `score` | 0 a 10 | Valoración editorial, con un decimal |
 | `destacado` | booleano | Sale primero en el orden por defecto |
 | `agregado` | `YYYY-MM-DD` | Se marca como «nuevo» durante 45 días desde `meta.actualizado` |
+| `verificado` | `YYYY-MM-DD` u omitido | **Opcional.** Día en que comprobaste precio y estado en el sitio oficial. La ficha lo muestra en verde; si falta, avisa de que el precio no se ha revisado desde el alta. Hay un filtro «Precio comprobado» y el validador avisa si pasa de 180 días |
 
 ### Qué comprueba el validador
 
@@ -222,13 +223,17 @@ worker siempre pide el catálogo a la red antes de mirar la caché.
 
 ## Mantenimiento recomendado
 
-Los precios de la IA cambian mucho. Un ritmo realista:
+Los precios de la IA cambian mucho, y algunos productos directamente desaparecen. Un ritmo realista:
 
 - **Cada mes** — repasar los precios de las herramientas marcadas como `destacado`, que son
-  las más visibles. Ejecutar `sellar.mjs` para que la fecha del pie refleje la revisión.
+  las más visibles, y ponerles `verificado` con la fecha del día. Ejecutar `sellar.mjs`.
 - **Cada trimestre** — repasar todo el catálogo, retirar lo que haya cerrado y añadir lo nuevo.
+  El validador te dice cuántas fichas llevan más de 180 días sin verificar.
 - **Cuando añadas algo** — poner `agregado` con la fecha real: así aparece con la insignia
   ✨ Nuevo y en el filtro de novedades durante 45 días.
+
+Al retirar una herramienta, vale la pena mirar antes quién la referencia en `alt` y poner un
+sustituto sensato a mano; `--arreglar-alt` solo borra la referencia, no la reemplaza.
 
 Si retiras una herramienta, ejecuta `node scripts/validar.mjs --arreglar-alt` para que ninguna
 otra la siga referenciando como alternativa.
@@ -237,10 +242,45 @@ otra la siga referenciando como alternativa.
 
 ## Aviso sobre los precios
 
-Las cifras son el **plan individual mensual de pago más barato en USD** en la fecha de
-`meta.actualizado`, y sirven para comparar, no para presupuestar. Cambian con frecuencia,
-varían por país e impuestos, y muchos productos ofrecen descuento anual. La interfaz lo
-advierte en el pie y en cada ficha. Verifica siempre en el sitio oficial antes de contratar.
+Las cifras son el **plan individual de referencia en USD/mes** y sirven para comparar, no para
+presupuestar. Cambian con frecuencia, varían por país e impuestos, y muchos productos ofrecen
+descuento anual.
+
+No todas las fichas están comprobadas al día. Las que sí lo están llevan el campo `verificado`
+y lo dicen en verde; el resto avisa de que el precio no se ha revisado desde el alta. Puedes
+filtrar por «Precio comprobado» para ver solo las primeras. Verifica siempre en el sitio oficial
+antes de contratar.
+
+## Historial de revisiones
+
+### 24 de septiembre de 2026 — v1.0.1 · 148 → 146 herramientas
+
+**Retiradas (4):**
+
+- **Sora** — OpenAI cerró la app y la generación de vídeo en ChatGPT el 26-04-2026; la API se
+  apagó el 24-09-2026.
+- **Tome** — el producto de presentaciones cerró el 30-04-2025; el equipo hace ahora Lightfield.
+- **Play.ht / PlayAI** — acquihire de Meta en jul-2025, plataforma cerrada el 31-12-2025.
+- **Codeium** — la marca dejó de existir: pasó a Windsurf y hoy es el «Windsurf Plugin».
+
+**Cambios de fondo:**
+
+- **Galileo AI → Stitch** (Google). De 19 $/mes a gratuito en vista previa.
+- **Windsurf → Devin Desktop** (Cognition). Ahora con plan gratuito, Pro 20 $ y Max 200 $.
+- **NotebookLM → Gemini Notebook** (renombrado el 16-07-2026).
+- **Udio** — tras el acuerdo con Universal ya no permite descargar ni publicar lo generado.
+  Nota bajada de 8,4 a 6,2 y retirada de destacadas.
+- **Suno** — modelos con licencia y topes mensuales de descarga; el plan gratis ya no descarga.
+- **Manus** — sigue independiente: China bloqueó la compra de Meta en abr-2026.
+
+**Altas (2):** Google Antigravity (agentes de código, plan individual gratuito) y Higgsfield
+(agregador de más de quince modelos de vídeo).
+
+**Nuevo campo `verificado`** con filtro propio: 18 de 146 fichas comprobadas en esta revisión.
+
+### 29 de julio de 2026 — v1.0.0
+
+Publicación inicial con 148 herramientas.
 
 ## Licencia
 
