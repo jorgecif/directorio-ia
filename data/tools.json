@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.0.1",
-    "actualizado": "2026-09-24",
+    "version": "1.0.2",
+    "actualizado": "2026-10-13",
     "moneda": "USD",
     "nota": "Los precios son de referencia (plan individual mensual mas economico de pago) y cambian con frecuencia. Verifica siempre en el sitio oficial antes de contratar.",
     "leyenda": {
@@ -92,6 +92,11 @@
       "id": "diseno",
       "nombre": "Diseno y UI",
       "emoji": "🎭"
+    },
+    {
+      "id": "ux",
+      "nombre": "Investigacion de usuario",
+      "emoji": "🧪"
     },
     {
       "id": "agentes",
@@ -223,7 +228,7 @@
       "nombre": "Gemini",
       "empresa": "Google",
       "url": "https://gemini.google.com",
-      "desc": "Asistente de Google integrado con Gmail, Drive, Docs y YouTube. Muy fuerte en multimodal y en generación de imagen. Tiene un plan AI Plus de entrada por 4,99 $.",
+      "desc": "Asistente de Google integrado con Gmail, Drive, Docs y YouTube. Desde el 9-10-2026 el plan gratuito solo da acceso al modelo más ligero (Flash-Lite); los modelos buenos exigen pagar.",
       "cat": [
         "chat",
         "escritura",
@@ -232,7 +237,7 @@
       ],
       "precio": "freemium",
       "desde": 19.99,
-      "gratis": "Modelo estandar sin costo, integracion basica con la cuenta de Google",
+      "gratis": "Solo el modelo Flash-Lite desde oct-2026. El plan AI Plus (4,99 $) añade Flash, y AI Pro (19,99 $) desbloquea todos",
       "api": true,
       "oss": false,
       "es": 5,
@@ -257,7 +262,7 @@
       "score": 9.2,
       "destacado": true,
       "agregado": "2026-06-01",
-      "verificado": "2026-09-24"
+      "verificado": "2026-10-13"
     },
     {
       "id": "copilot-ms",
@@ -1443,7 +1448,7 @@
         "video"
       ],
       "precio": "freemium",
-      "desde": 15,
+      "desde": 18,
       "gratis": "Editor completo, plantillas y creditos mensuales de IA",
       "api": true,
       "oss": false,
@@ -1469,7 +1474,8 @@
       ],
       "score": 9.1,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "removebg",
@@ -1724,7 +1730,8 @@
       ],
       "score": 9,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "veo",
@@ -1796,7 +1803,8 @@
       ],
       "score": 8.8,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "hailuo",
@@ -1974,7 +1982,8 @@
       ],
       "score": 8.8,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "d-id",
@@ -2016,7 +2025,7 @@
       "nombre": "Descript",
       "empresa": "Descript",
       "url": "https://descript.com",
-      "desc": "Edita video y podcast como si fuera un documento de texto: borras palabras y desaparecen del video. Incluye clonacion de voz.",
+      "desc": "Edita vídeo y pódcast como si fuera un documento de texto: borras palabras y desaparecen del vídeo. Incluye clonación de voz. El plan Hobbyist cubre lo básico; Creator (35 $) añade 4K y el triple de material.",
       "cat": [
         "video",
         "audio",
@@ -2024,7 +2033,7 @@
       ],
       "precio": "freemium",
       "desde": 24,
-      "gratis": "1 hora de transcripcion al mes y edicion basica",
+      "gratis": "60 minutos de material al mes con exportación en 720p y marca de agua",
       "api": false,
       "oss": false,
       "es": 4,
@@ -2047,7 +2056,8 @@
       ],
       "score": 8.9,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "capcut",
@@ -3610,7 +3620,7 @@
         "no-code"
       ],
       "precio": "freemium",
-      "desde": 16,
+      "desde": 18,
       "gratis": "3 archivos de diseno y funciones IA limitadas",
       "api": true,
       "oss": false,
@@ -3634,7 +3644,8 @@
       ],
       "score": 9.1,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "uizard",
@@ -3886,7 +3897,8 @@
       ],
       "score": 9.2,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "make",
@@ -3900,8 +3912,8 @@
         "marketing"
       ],
       "precio": "freemium",
-      "desde": 9,
-      "gratis": "1.000 operaciones al mes",
+      "desde": 12,
+      "gratis": "1.000 créditos al mes, 2 escenarios activos y un intervalo mínimo de 15 minutos",
       "api": true,
       "oss": false,
       "es": 5,
@@ -3922,7 +3934,8 @@
       ],
       "score": 8.8,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "zapier",
@@ -3995,7 +4008,8 @@
       ],
       "score": 8.7,
       "destacado": true,
-      "agregado": "2026-06-01"
+      "agregado": "2026-06-01",
+      "verificado": "2026-10-13"
     },
     {
       "id": "flowise",
@@ -5546,6 +5560,115 @@
       "destacado": false,
       "agregado": "2026-09-24",
       "verificado": "2026-09-24"
+    },
+    {
+      "id": "synthetic-users",
+      "nombre": "Synthetic Users",
+      "empresa": "Synthetic Users",
+      "url": "https://www.syntheticusers.com",
+      "desc": "Entrevista a participantes sintéticos generados por IA en lugar de reclutar personas reales. Solo vende planes anuales desde 12.500 $ al año. La propia empresa avisa de que no sustituye a la investigación con gente de verdad.",
+      "cat": [
+        "ux",
+        "investigacion",
+        "marketing"
+      ],
+      "precio": "pago",
+      "desde": 1042,
+      "gratis": null,
+      "api": false,
+      "oss": false,
+      "es": 3,
+      "priv": "no-entrena",
+      "plat": [
+        "web"
+      ],
+      "nivel": 2,
+      "usos": [
+        "Explorar hipótesis antes de investigar",
+        "Pretest de conceptos",
+        "Preparar guiones de entrevista"
+      ],
+      "alt": [
+        "lyssna",
+        "maze",
+        "chatgpt"
+      ],
+      "score": 7,
+      "destacado": false,
+      "agregado": "2026-10-13",
+      "verificado": "2026-10-13"
+    },
+    {
+      "id": "maze",
+      "nombre": "Maze",
+      "empresa": "Maze",
+      "url": "https://maze.co",
+      "desc": "Tests de usabilidad y encuestas con análisis asistido por IA. Valida prototipos de Figma con usuarios reales y resume los resultados sin que tengas que ver cada sesión.",
+      "cat": [
+        "ux",
+        "diseno"
+      ],
+      "precio": "freemium",
+      "desde": 99,
+      "gratis": "Plan gratuito con un estudio activo; los límites concretos varían y conviene mirarlos en su web",
+      "api": false,
+      "oss": false,
+      "es": 4,
+      "priv": "no-entrena",
+      "plat": [
+        "web"
+      ],
+      "nivel": 1,
+      "usos": [
+        "Probar prototipos con usuarios",
+        "Encuestas de producto",
+        "Validar antes de construir"
+      ],
+      "alt": [
+        "lyssna",
+        "synthetic-users",
+        "figma-ai"
+      ],
+      "score": 8,
+      "destacado": false,
+      "agregado": "2026-10-13",
+      "verificado": "2026-10-13"
+    },
+    {
+      "id": "lyssna",
+      "nombre": "Lyssna",
+      "empresa": "Lyssna",
+      "url": "https://lyssna.com",
+      "desc": "Antes UsabilityHub. Tests rápidos de diseño (preferencia, primer clic, card sorting) y entrevistas. El panel de participantes se paga aparte, por crédito.",
+      "cat": [
+        "ux",
+        "diseno"
+      ],
+      "precio": "freemium",
+      "desde": 199,
+      "gratis": "Estudios rápidos ilimitados, 3 asientos y 15 respuestas que reclutes tú",
+      "api": false,
+      "oss": false,
+      "es": 3,
+      "priv": "no-entrena",
+      "plat": [
+        "web"
+      ],
+      "nivel": 1,
+      "usos": [
+        "Tests de preferencia y primer clic",
+        "Card sorting",
+        "Validar diseños con gente real"
+      ],
+      "alt": [
+        "maze",
+        "synthetic-users",
+        "uizard"
+      ],
+      "score": 7.8,
+      "destacado": false,
+      "agregado": "2026-10-13",
+      "verificado": "2026-10-13"
     }
   ]
 }

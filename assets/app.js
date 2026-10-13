@@ -1303,9 +1303,15 @@ function abrirStats() {
   const porNivel = Object.entries(ETIQ_NIVEL).map(([v, t]) => [t, conteo((h) => h.nivel === Number(v))]);
   const porEs = [5, 4, 3, 2, 1].map((v) => [`${'★'.repeat(v)}`, conteo((h) => h.es === v)]);
 
-  const pagas = hs.filter((h) => h.desde > 0);
-  const medio = pagas.reduce((s, h) => s + h.desde, 0) / (pagas.length || 1);
-  const masBaratas = pagas.slice().sort((a, b) => a.desde - b.desde).slice(0, 5);
+  const pagas = hs.filter((h) => h.desde > 0).sort((a, b) => a.desde - b.desde);
+  // Mediana y no media: hay planes de empresa de cuatro cifras que disparan el promedio
+  // y dejarian de describir lo que paga una persona normal.
+  const mediana = pagas.length
+    ? (pagas.length % 2
+        ? pagas[(pagas.length - 1) / 2].desde
+        : (pagas[pagas.length / 2 - 1].desde + pagas[pagas.length / 2].desde) / 2)
+    : 0;
+  const masBaratas = pagas.slice(0, 5);
 
   $('#stats-cuerpo').innerHTML = `
     <div class="ficha-rejilla" style="margin-bottom:18px">
@@ -1313,7 +1319,7 @@ function abrirStats() {
       <div class="dato"><dt>Usables sin pagar</dt><dd style="font-size:22px">${conteo(tieneGratis)} <small style="font-size:12px;color:var(--texto-3)">(${Math.round(conteo(tieneGratis) / n * 100)}%)</small></dd></div>
       <div class="dato"><dt>Código abierto</dt><dd style="font-size:22px">${conteo((h) => h.oss)}</dd></div>
       <div class="dato"><dt>Ejecutables en local</dt><dd style="font-size:22px">${conteo((h) => h.priv === 'local')}</dd></div>
-      <div class="dato"><dt>Precio medio de pago</dt><dd style="font-size:22px">$${medio.toFixed(0)}<small style="font-size:12px">/mes</small></dd></div>
+      <div class="dato"><dt>Precio mediano de pago</dt><dd style="font-size:22px">$${dinero(mediana)}<small style="font-size:12px">/mes</small></dd></div>
       <div class="dato"><dt>Con API</dt><dd style="font-size:22px">${conteo((h) => h.api)}</dd></div>
     </div>
 

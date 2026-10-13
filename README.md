@@ -1,6 +1,6 @@
 # Directorio IA
 
-Directorio comparativo de herramientas de IA generativa: **146 herramientas** en 21 categorías,
+Directorio comparativo de herramientas de IA generativa: **149 herramientas** en 22 categorías,
 con precios, política de privacidad, calidad en español, plataformas y alternativas equivalentes.
 
 Sitio **estático puro**: sin framework, sin build, sin dependencias de npm. Todo el contenido vive
@@ -125,7 +125,7 @@ Copia esta plantilla dentro del array `herramientas`:
 | | `freemium` | Plan gratuito útil + planes de pago |
 | | `pago` | Requiere pagar (puede tener prueba) |
 | | `oss` | Código abierto, gratis y autoalojable |
-| `desde` | número | Plan individual de referencia en USD/mes: el equivalente a «Pro» o «Plus», **no** el escalón más barato del catálogo del fabricante. Así el comparador enfrenta cosas comparables; los planes de entrada más baratos (ChatGPT Go, Google AI Plus) van en `desc`. `0` si no hay que pagar |
+| `desde` | número | Plan individual de referencia en USD/mes: el equivalente a «Pro» o «Plus», **no** el escalón más barato del catálogo del fabricante. Así el comparador enfrenta cosas comparables; los planes de entrada más baratos (ChatGPT Go, Google AI Plus) van en `desc`. `0` si no hay que pagar. Si el producto solo se vende por año, pon el equivalente mensual y di el precio anual real en `desc` |
 | `priv` | `local` | Corre en el equipo del usuario, los datos no salen |
 | | `no-entrena` | No entrena sus modelos con datos del usuario por defecto |
 | | `opt-out` | Puede entrenar, pero se desactiva en ajustes |
@@ -252,6 +252,24 @@ filtrar por «Precio comprobado» para ver solo las primeras. Verifica siempre e
 antes de contratar.
 
 ## Historial de revisiones
+
+### 13 de octubre de 2026 — v1.0.2 · 146 → 149 herramientas
+
+**Categoría nueva: 🧪 Investigación de usuario**, con tres altas:
+
+- **Synthetic Users** — entrevista participantes simulados por IA en vez de reclutar gente real.
+  Solo planes anuales desde 12.500 $/año, sin prueba gratuita.
+- **Maze** — tests de usabilidad sobre prototipos de Figma, con plan gratuito.
+- **Lyssna** (antes UsabilityHub) — tests rápidos de diseño y card sorting, con plan gratuito.
+
+**Cambios verificados:**
+
+- **Gemini** — desde el 9-10-2026 el plan gratuito solo da acceso al modelo Flash-Lite.
+- **Canva** 15 $ → 18 $, **Figma** 16 $ → 18 $, **Make** 9 $ → 12 $ (precio de facturación mensual).
+- **Descript** — plan gratuito y escalones corregidos tras la reestructuración de 2026.
+
+**Precio comprobado:** 30 de 149 fichas (eran 18 de 146). La estadística de precio pasó de media
+a **mediana**, porque un plan de cuatro cifras distorsionaba el promedio.
 
 ### 24 de septiembre de 2026 — v1.0.1 · 148 → 146 herramientas
 
